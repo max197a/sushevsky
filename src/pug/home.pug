@@ -8,184 +8,31 @@ block content
   section(data-section='0')
     .firstscreen
       .container
-        h1(data-aos='fade-up') The First Digital Party Logistics Provider
-        p(data-aos='fade-up') SaaS driven business delivered to you by the team of logistics experts
+        h1 Sushevsky
   
   // END SECTION :: firstscreen
 
-  // BEGIN SECTION :: info
-  section#section-about(data-section='1')
-    .info
-      .container
-        p(data-aos='fade-up') Carggo was created in 2016 to upgrade logistics tools and services. Our team of IT engineers and logistics specialists are continually refining Carggo platform to meet your needs, maintain fair pricing, and open doors to improved operational <br>experiences 
-        p(data-aos='fade-up') We empower our shippers and carriers to make their <br>own business choices
-  // END SECTION :: info
-
-  // BEGIN SECTION :: freedom
-  section
-    .freedom(data-aos='fade-up')
-      img(src="img/freedom.svg", alt="")
-  // END SECTION :: freedom
-
-  // BEGIN SECTION :: typical-shippers
-  section#section-for-shippers(data-section='2')
-    .typical
-      img(src="img/freedom-small.svg" alt="" data-aos='fade-up')
-      .container(data-aos='fade-up')
-        p.typical__title SHIPPERS
-        p.typical__sub-title We are setting a new level of service reliability  and convenience for our shippers
-        .typical__line
-      a.typical__scroll(href="#section-advantages1") 
-        .typical__triangle
-          <svg width="45" height="26" xmlns="http://www.w3.org/2000/svg"><path d="M43.334 2L22.167 23.167 1 2" stroke="#FFF" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
-  // END SECTION :: typical-shippers
-
-  // BEGIN SECTION :: shippers-advantages
-  section#section-advantages1
-    .advantages
-      .container
-        .advantages__grid
-          .advantages__item(data-aos='fade-up')
-            .advantages__icon
-              +icon('ico-icon1-1')
-            p Full delivery 
-              <br>responsibility
-          .advantages__item(data-aos='fade-up')
-            .advantages__icon
-              +icon('ico-icon1-2')
-            p Instant fair pricing 
-              <br>by the algorithm
-          .advantages__item(data-aos='fade-up')
-            .advantages__icon
-              +icon('ico-icon1-3')
-            p User friendly 
-              <br>interface
-          .advantages__item(data-aos='fade-up')
-            .advantages__icon
-              +icon('ico-icon1-4')
-            p The highest level 
-              <br>of transparency
-          .advantages__item(data-aos='fade-up')
-            .advantages__icon
-              +icon('ico-icon1-5')
-            p Reliability assured 
-              <br>by our best capacity
-          .advantages__item(data-aos='fade-up')
-            .advantages__icon
-              +icon('ico-icon1-6')
-            p The fixed service
-              <br>fee of 7.5%
-        .advantages__line
-
-  // END SECTION :: shippers-advantages
-
-  // BEGIN SECTION :: typical-carriers
-  section#section-for-carriers(data-section='3')
-    .typical.typical--carriers
-      img(src="img/freedom-small.svg", alt="" data-aos='fade-up')
-      .container(data-aos='fade-up')
-        p.typical__title CARRIERS
-        p.typical__sub-title We give our carriers flexibility and automated tools that allow them to select their loads
-        .typical__line
-      a.typical__scroll(href="#section-advantages2") 
-        .typical__triangle
-          <svg width="45" height="26" xmlns="http://www.w3.org/2000/svg"><path d="M43.334 2L22.167 23.167 1 2" stroke="#FFF" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
-  // END SECTION :: typical-carriers
-
-  // BEGIN SECTION :: carriers-advantages
-  section#section-advantages2
-    .advantages
-      .container
-        .advantages__grid
-          .advantages__item(data-aos='fade-up')
-            .advantages__icon
-              +icon('ico-icon2-1')
-            p Fair pricing 
-              <br>and fast payment
-          .advantages__item(data-aos='fade-up')
-            .advantages__icon
-              +icon('ico-icon2-2')
-            p Choose and book 
-              <br>your own loads
-          .advantages__item(data-aos='fade-up')
-            .advantages__icon
-              +icon('ico-icon2-3')
-            p Reduced empty 
-              <br>miles
-          .advantages__item(data-aos='fade-up')
-            .advantages__icon
-              +icon('ico-icon2-4')
-            p Automated check-in 
-              <br>and e-documentation
-          .advantages__item(data-aos='fade-up')
-            .advantages__icon
-              +icon('ico-icon2-5')
-            p Loyalty programs 
-              <br>and 24/7 online support
-          .advantages__item(data-aos='fade-up')
-            .advantages__icon
-              +icon('ico-icon2-6')
-            p Easy-to-use 
-              <br>platform
-        .advantages__line
-  // END SECTION :: carriers-advantages
-
-  // BEGIN SECTION :: platform
-  section#section-platform(data-section='4')
-    .platform
-      .container(data-aos='fade-up')
-        p.platform__title the platform
-        p.platform__sub-title Our 70,000 lines of code don’t lie. Our algorithm adjusts  to your expectations so that you can book your loads  and track them hassle-free. Full scope of tools on our advanced logistical platform is only few taps away
-      img(src="img/platform-uncompressed.jpg", srcset="img/platform-uncompressed@2x.jpg 2x", alt="" data-aos='fade-up')
-      .container
-        a.platform__btn(href="#section-demo" open-form) get the demo
-  // END SECTION :: platform
-
-  // BEGIN SECTION :: form-block
-  section#section-demo
-    .form-block.form-block-hidden
-      .container
-        .form-block__close
-          a(href="#" close-form)
-            <svg width="42" height="42" xmlns="http://www.w3.org/2000/svg"><g stroke="#252525" fill="none" fill-rule="evenodd"><path d="M35.392 35.735c-8.001 7.812-20.821 7.658-28.632-.344-7.812-8.002-7.658-20.82.344-28.632 8-7.812 20.82-7.657 28.632.344 7.812 8.002 7.657 20.82-.344 28.632zM30.173 13L13 29.765M13 13l16.766 17.173"/></g></svg>
-        .form-block__title Please fill in all required fields and we will contact you shortly to provide a quote
-        form.form-block__form.js-form(action="")
-          .form-block__grid
-            .form-block__item
-              label(for="t1") Name
-              input#t1(type="text" name="first_name" required)
-            .form-block__item
-              label(for="t2") Email
-              input#t2(type="text" name="email" required)
-            .form-block__item
-              label(for="t3") Phone
-              input#t3(type="number" name="phone" required)
-          .form-block__textarea
-            label(for="t4") Message
-            textarea(js-autogrow rows="5")#t4
-          input.form-block__btn(type="submit" value="SEND")
-  // END SECTION :: form-block
-
-  // BEGIN SECTION :: team
-  section#section-careers(data-section='5')
-    .team
-      .container(data-aos='fade-up')
-        p.team__title The Team
-        p.team__sub-title Our team is our core asset. We encourage <br>a cross-disciplinary approach at Carggo. All members of our team can share and learn new skills beyond their direct responsibilities. Check out our exciting career opportunities in Chicago, IL and Vilnius, Lithuania.
-        a.team__btn(href="team.html") Apply now
-  // END SECTION :: team
-
-  // BEGIN SECTION :: contacts
-  section#section-contacts(data-section='6')
-    .contacts
-      .contacts__map#contacts__map
-      .container
-        p.contacts__title(data-aos='fade-up') Contact us
-        .contacts__item(data-aos='fade-up')
-          address.contacts__address(data-marker-id="1") 1315 Macom Dr. Suite #003 <br>Naperville, IL, USA 60564 <br>Phone: <a>+312 635-6005</a>
-        .contacts__item(data-aos='fade-up')
-          address.contacts__address(data-marker-id="2") Upes 23, GREEN HALL 2, <br>Vilnius 08107, Lithuania <br>Phone: <a>+370 694 202 72</a>
-        .contacts__item(data-aos='fade-up')
-          .contacts__mail(href="mailto:info@carggo.com") info@carggo.com
-  // END SECTION :: contacts
-  
+  //- // BEGIN SECTION :: form-block
+  //- section#section-demo
+  //-   .form-block.form-block-hidden
+  //-     .container
+  //-       .form-block__close
+  //-         a(href="#" close-form)
+  //-           <svg width="42" height="42" xmlns="http://www.w3.org/2000/svg"><g stroke="#252525" fill="none" fill-rule="evenodd"><path d="M35.392 35.735c-8.001 7.812-20.821 7.658-28.632-.344-7.812-8.002-7.658-20.82.344-28.632 8-7.812 20.82-7.657 28.632.344 7.812 8.002 7.657 20.82-.344 28.632zM30.173 13L13 29.765M13 13l16.766 17.173"/></g></svg>
+  //-       .form-block__title Please fill in all required fields and we will contact you shortly to provide a quote
+  //-       form.form-block__form.js-form(action="")
+  //-         .form-block__grid
+  //-           .form-block__item
+  //-             label(for="t1") Name
+  //-             input#t1(type="text" name="first_name" required)
+  //-           .form-block__item
+  //-             label(for="t2") Email
+  //-             input#t2(type="text" name="email" required)
+  //-           .form-block__item
+  //-             label(for="t3") Phone
+  //-             input#t3(type="number" name="phone" required)
+  //-         .form-block__textarea
+  //-           label(for="t4") Message
+  //-           textarea(js-autogrow rows="5")#t4
+  //-         input.form-block__btn(type="submit" value="SEND")
+  //- // END SECTION :: form-block
