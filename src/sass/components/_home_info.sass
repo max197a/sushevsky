@@ -1,0 +1,56 @@
+.info
+  padding: 61px 0 100px
+  margin-bottom: 30px
+  p
+    position: relative
+    font-size: 39px
+    line-height: 57px
+    text-align: center
+    margin-bottom: 60px
+    font-family: $extrabold
+    &::before,
+    &::after
+      position: static
+      content: ''
+      height: 8px
+      width: 306px
+      margin: 0 auto 72px
+      background: #252525
+    &:first-of-type
+      &::before
+        display: block
+        margin: 0 auto 50px
+    &:last-of-type
+      margin-bottom: 0
+      &::after
+        display: block
+        margin: 50px auto 0
+
++r($desktop1068)
+  .info
+    padding: 40px 0 70px
+    p
+      font-size: 30px
+      line-height: 38px
+      margin-bottom: 40px
+
++r($tablet)
+  .info
+    padding: 26px 0 45px
+    p
+      font-size: 22px
+      line-height: 31px
+      margin-bottom: 31px
+      &::before,
+      &::after
+        width: 140px
+        height: 4px
+      &:first-of-type
+        &::before
+          display: block
+          margin: 0 auto 39px
+      &:last-of-type
+        margin-bottom: 0
+        &::after
+          display: block
+          margin: 38px auto 0

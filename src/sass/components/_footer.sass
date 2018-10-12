@@ -1,0 +1,41 @@
+// FOOTER
+.footer
+  background: #fff
+  padding: 31px 0 22px
+  .container
+    // max-width: 1420px
+    max-width: 100%
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    a
+      font-size: 0
+      line-height: 0
+      display: inline-block
+      margin-left: 25px
+      svg
+        g
+          transition: all $transitionSpeed $ease
+      &:hover
+        svg
+          g
+            fill: $colorRed
+    p 
+      font-size: 21px
+      line-height: 1
+      font-family: $regular
+
++r($tablet)
+  .footer
+    padding: 40px 0 43px
+    &__wrapper
+      flex-direction: column-reverse
+      a
+        margin: 0 12px
+    &__logo
+      margin: 43px auto 47px
+    p
+      width: 100%
+      text-align: center
+      margin: 0 auto

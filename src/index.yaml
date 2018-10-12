@@ -1,0 +1,9 @@
+ProjectTitle: Carggo
+
+PageList:
+- file: home.html
+  ready: 90
+- file: login.html
+  ready: 90
+- file: team.html
+  ready: 90
