@@ -35,10 +35,17 @@ body, html
     display: flex
     flex-direction: column
     // header offset ex
-    // padding-top: 100px
+    // padding-top: 141px
+
+h1,
+h2,
+h3,
+h4,
+p
+  margin: 0
 
 .container
-  max-width: 1200px
+  max-width: 1280px
   width: 100%
   margin-left: auto
   margin-right: auto
@@ -53,6 +60,36 @@ body, html
 input
   -moz-appearance: none
   -webkit-appearance: none
+
+.title-container
+  width: 100%
+  text-align: center
+  margin: 23px auto
+
+h2
+  position: relative
+  display: inline-block
+  width: auto
+  text-align: center
+  font-size: 36px
+  font-family: $regular
+  line-height: 1
+  margin: 0 auto
+  padding: 0 45px
+  &:before,
+  &:after
+    display: block
+    position: absolute
+    content: ''
+    width: 145px
+    height: 1px
+    background: #fad9ca
+    top: 50%
+    transform: translateY(-50%)
+  &:before
+    right: 100%
+  &:after
+    left: 100%
 
 .page
   overflow: hidden

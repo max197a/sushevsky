@@ -1,0 +1,37 @@
+.pre-footer
+  background: #fff
+  &__grid
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 58px 0
+    a
+      display: inline-block
+      margin: 0 35px
+      width: 50px
+      height: 50px
+      background-color: #2b2b29
+      border-radius: 50%
+      transition: all $transitionSpeed $ease
+      &:nth-child(1)
+        background-image: url(../img/vk-social-network-logo.svg)
+        background-size: 65%
+        background-position: center
+        background-repeat: no-repeat
+      &:nth-child(2)
+        background-image: url(../img/instagram-logo.svg)
+        background-size: 63%
+        background-position: center
+        background-repeat: no-repeat
+      &:nth-child(3)
+        background-image: url(../img/facebook-logo.svg)
+        background-size: 60%
+        background-position: center
+        background-repeat: no-repeat
+      &:hover
+        &:nth-child(1)
+          background-color: $vk
+        &:nth-child(2)
+          background-color: $instagram
+        &:nth-child(3)
+          background-color: $facebook

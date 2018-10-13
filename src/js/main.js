@@ -8,38 +8,6 @@ $(document).ready(function() {
   var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing for anime.js
   var lastClickEl;
 
-  // maps settings
-  // should be on top
-  var map,
-    markers = [],
-    markerDefault,
-    markersCoord,
-    mapCenter;
-  function updateMapVars() {
-    if ($("#contacts__map").length > 0) {
-      markerDefault = {
-        url: "img/pin.svg",
-        scaledSize: new google.maps.Size(31, 44)
-      };
-      markersCoord = [
-        {
-          lat: 41.729992,
-          lng: -88.20742,
-          marker: markerDefault
-        },
-        {
-          lat: 54.695636,
-          lng: 25.259746,
-          marker: markerDefault
-        }
-      ];
-      mapCenter = {
-        lat: 41.729992,
-        lng: -88.20742
-      };
-    }
-  }
-
   ////////////
   // READY - triggered when PJAX DONE
   ////////////
@@ -55,15 +23,11 @@ $(document).ready(function() {
   _window.on("resize", debounce(pagination, 250));
 
   function pageReady() {
-    updateMapVars();
-
     initMasks();
     initAutogrow();
     initSelectric();
     initValidations();
-
-    initMap();
-    _window.on("resize", debounce(initMap, 250))
+    initSliders();
   }
 
   // this is a master function which should have all functionality
@@ -132,14 +96,22 @@ $(document).ready(function() {
   ////////////////////
   // CHANGE TITLE LOGIN PAGE
   ////////////////////
-  _document.on("click", "[js-shipper-button]", function() {
-    $(".carrier-title").hide();
-    $(".shipper-title").fadeIn();
+  _document.on("click", "[js-language-button]", function() {
+    $(".header__o-languages a").removeClass("is-active");
+    $(this).addClass("is-active");
   });
 
-  _document.on("click", "[js-carrier-button]", function() {
-    $(".shipper-title").hide();
-    $(".carrier-title").fadeIn();
+  _document.on("click", "[js-popular-tab]", function(e) {
+    e.preventDefault();
+    var $self = $(this),
+      tabIndex = $self.index();
+    $self.siblings().removeClass("is-active");
+    $self.addClass("is-active");
+    $(".popular__tab")
+      .removeClass("is-active")
+      .css("display", "none")
+      .eq(tabIndex)
+      .fadeIn();
   });
 
   ////////////////////
@@ -199,6 +171,18 @@ $(document).ready(function() {
   // SLIDERS
   //////////
 
+  function initSliders() {
+    $("[js-main-slider]").slick({
+      // infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: true
+      // autoplay: true,
+      // autoplaySpeed: 2000
+    });
+  }
+
   //////////
   // MODALS
   //////////
@@ -229,86 +213,6 @@ $(document).ready(function() {
       disableOnMobile: false,
       nativeOnMobile: false
     });
-  }
-
-  //////////
-  // MAP
-  //////////
-
-  function initMap() {
-    if ($("#contacts__map").length && _window.width() > 768 && !map) {
-      map = new google.maps.Map(document.getElementById("contacts__map"), {
-        center: mapCenter,
-        zoom: 15,
-        // gestureHandling: 'greedy',
-        // scrollwheel: false,
-        disableDefaultUI: false,
-        zoomControl: true,
-        mapTypeControl: false,
-        scaleControl: true,
-        streetViewControl: false,
-        rotateControl: false,
-        fullscreenControl: false,
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-        styles:[{featureType:"all",elementType:"labels.text.fill",stylers:[{saturation:36},{color:"#000000"},{lightness:40}]},{featureType:"all",elementType:"labels.text.stroke",stylers:[{visibility:"on"},{color:"#000000"},{lightness:16}]},{featureType:"all",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"administrative",elementType:"geometry.fill",stylers:[{color:"#000000"},{lightness:20}]},{featureType:"administrative",elementType:"geometry.stroke",stylers:[{color:"#000000"},{lightness:17},{weight:1.2}]},{featureType:"landscape",elementType:"geometry",stylers:[{color:"#000000"},{lightness:20}]},{featureType:"poi",elementType:"geometry",stylers:[{color:"#000000"},{lightness:21}]},{featureType:"road.highway",elementType:"geometry.fill",stylers:[{color:"#000000"},{lightness:17}]},{featureType:"road.highway",elementType:"geometry.stroke",stylers:[{color:"#000000"},{lightness:29},{weight:.2}]},{featureType:"road.arterial",elementType:"geometry",stylers:[{color:"#000000"},{lightness:18}]},{featureType:"road.local",elementType:"geometry",stylers:[{color:"#000000"},{lightness:16}]},{featureType:"transit",elementType:"geometry",stylers:[{color:"#000000"},{lightness:19}]},{featureType:"water",elementType:"geometry",stylers:[{color:"#000000"},{lightness:17}]}]
-      });
-
-      $.each(markersCoord, function(i, coords) {
-        var marker = new google.maps.Marker({
-          position: new google.maps.LatLng(coords.lat, coords.lng),
-          map: map,
-          icon: coords.marker
-        });
-        markers.push(marker);
-
-        // click handler
-        google.maps.event.addListener(marker, "click", function() {
-          changeMapsMarker(null, marker);
-        });
-      });
-    }
-  }
-
-  // change marker onclick
-  _document.on("click", ".contacts__address", function() {
-    if ( _window.width() <= 768 ){
-      var tel = $(this).find('a').text()
-      window.location.href = 'tel:'+tel+'';
-    } else {
-      var markerId = $(this).data("marker-id") - 1;
-      if (markerId !== undefined) {
-        changeMapsMarker(markerId);
-      }
-    }
-
-  });
-
-  function changeMapsMarker(id, marker, clear) {
-    if ( id !== null){
-    } else if ( marker !== null ){
-      id = markers.indexOf(marker) // get id
-    }
-    var targetMarker = markers[id];
-
-    // maps controls
-    if (targetMarker) {
-      map.panTo(targetMarker.getPosition());
-
-      // set active class
-      var linkedControl = $(
-        ".contacts__address[data-marker-id=" + (id + 1) + "]"
-      );
-
-      if (linkedControl.length > 0) {
-        $(".contacts__address").removeClass("is-active");
-        linkedControl.addClass("is-active");
-      }
-    }
-
-    if (clear) {
-      $(".contacts__address").removeClass("is-active");
-      map.panTo(mapCenter);
-    }
   }
 
   ////////////////
@@ -429,7 +333,7 @@ $(document).ready(function() {
     var headerHeight = $(".header").height();
     var footerHeight = $(".footer").height();
     var vScroll = _window.scrollTop();
-    var vScrollBottom = _document.height() - _window.height() - vScroll
+    var vScrollBottom = _document.height() - _window.height() - vScroll;
 
     if (sections.length === 0) {
       paginationAnchors.removeClass("is-active");
@@ -444,8 +348,8 @@ $(document).ready(function() {
     cur = $(cur[cur.length - 1]);
     var id = cur && cur.length ? cur.data("section") : "1";
 
-    if ( vScrollBottom < footerHeight ){
-      id = $(sections[sections.length - 1]).data("section")
+    if (vScrollBottom < footerHeight) {
+      id = $(sections[sections.length - 1]).data("section");
     }
 
     // Set/remove active class

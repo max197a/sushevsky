@@ -1,16 +1,510 @@
 ---
-title: FIRST DIGITAL PARTY LOGISTICS PROVIDER
+title: Sushevsky
 ---
 extends shared/_layout
 block content
 
-  // BEGIN SECTION :: firstscreen
-  section(data-section='0')
-    .firstscreen
-      .container
-        h1 Sushevsky
+  // BEGIN SECTION :: free
+
+  section.free(data-aos='fade-down')
+    .container
+      p Бесплатная доставка при заказе от 900 руб.
   
-  // END SECTION :: firstscreen
+  // END SECTION :: free
+
+  // BEGIN SECTION :: slider
+
+  section(data-aos='fade-up')
+    .main-slider
+      .container
+        .slider(js-main-slider)
+          .item
+            img(src="img/slide-1.jpg", alt="")
+          .item
+            img(src="img/slide-1.jpg", alt="")
+          .item
+            img(src="img/slide-1.jpg", alt="")
+          .item
+            img(src="img/slide-1.jpg", alt="")
+
+  // END SECTION :: slider
+
+  // BEGIN SECTION :: menu
+
+  section
+    .menu
+      .container
+        .title-container
+          h2 Меню
+        .menu__grid
+          .menu__item
+            a(href="#")
+            p.menu__title Суши
+            .menu__image
+              img(src="img/menu-1.jpg", alt="")
+          .menu__item
+            a(href="#")
+            p.menu__title Роллы
+            .menu__image
+              img(src="img/menu-2.jpg", alt="")
+          .menu__item
+            a(href="#")
+            p.menu__title Сеты
+            .menu__image
+              img(src="img/menu-3.jpg", alt="")
+          .menu__item
+            a(href="#")
+            p.menu__title Пицца
+            .menu__image
+              img(src="img/menu-4.jpg", alt="")
+          .menu__item
+            a(href="#")
+            p.menu__title Лапша
+            .menu__image
+              img(src="img/menu-5.jpg", alt="")
+          .menu__item
+            a(href="#")
+            p.menu__title Салаты
+            .menu__image
+              img(src="img/menu-6.jpg", alt="")
+          .menu__item
+            a(href="#")
+            p.menu__title Закуски
+            .menu__image
+              img(src="img/menu-7.jpg", alt="")
+          .menu__item
+            a(href="#")
+            p.menu__title Напитки
+            .menu__image
+              img(src="img/menu-8.jpg", alt="")
+
+  // END SECTION :: menu
+
+  // BEGIN SECTION :: popular
+
+  section
+    .popular
+      .container
+        .title-container
+          h2 Популярные товары
+        .popular__links
+          a.is-active(href="#" js-popular-tab) СУШИ
+          a(href="#" js-popular-tab) РОЛЛЫ
+          a(href="#" js-popular-tab) СЕТЫ
+          a(href="#" js-popular-tab) ПИЦЦА
+          a(href="#" js-popular-tab) ЛАПША
+        .popular__tabs
+          .popular__tab.is-active
+            .popular__grid
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title #1 Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+          .popular__tab
+            .popular__grid
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title #2 Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+          .popular__tab
+            .popular__grid
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title #3 Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+          .popular__tab
+            .popular__grid
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title #4 Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+          .popular__tab
+            .popular__grid
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title #5 Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+              .popular__item
+                .popular__image
+                  img(src="img/popular-1.jpg", alt="")
+                .popular__info
+                  p.popular__title Супер пупер суши Игинаши
+                  p.popular__weight 300гр.
+                  .popular__about-container
+                    p.popular__about Описание блюда, описание блюда, описание блюда и т.д.
+                .popular__buttons
+                  a.popular__btn(href="#") Добавить
+                  p.popular__price 300 руб.
+
+  // END SECTION :: popular
+
+  // BEGIN SECTION :: share
+
+  section
+    .share
+      .container
+        .title-container
+          h2 Акции
+        .slider(js-main-slider)
+          .item
+            img(src="img/slide-2-1.jpg", alt="")
+          .item
+            img(src="img/slide-2-1.jpg", alt="")
+          .item
+            img(src="img/slide-2-1.jpg", alt="")
+          .item
+            img(src="img/slide-2-1.jpg", alt="")
+
+  // END SECTION :: share
+
+  // BEGIN SECTION :: reviews
+
+  section
+    .reviews
+      .container
+        .title-container
+          h2 Отзывы
+        .reviews__grid
+          .reviews__item
+            .reviews__head
+              .reviews__head-container
+                p.reviews__title Сергей Сергеевич А.
+                p.reviews__date 20.08.2018
+            p.reviews__info Еда была очень вкусной, горячей. Все очень понравилось. Особенно сосиски из осьминога, это чтото. Курьер вежливый, доставил быстро.  Буду рекомендовать знакомым.
+          .reviews__item
+            .reviews__head
+              .reviews__head-container
+                p.reviews__title Валерий Алексеевич А.
+                p.reviews__date 20.08.2018
+            p.reviews__info Все просто замечательно. Вкусно, быстро и недорого. Процветания Вам!
+          .reviews__item
+            .reviews__head
+              .reviews__head-container
+                p.reviews__title Алиса Сергеевна Сергеевна У.
+                p.reviews__date 20.08.2018
+            p.reviews__info Заказали несколько сетов с мясов крокодила. Доставили быстрее, чем за 30 минут. Все было горячим. Очень понравилось. Спасибо!
+        a.reviews__btn(href="#") Посмотреть все отзывы
+
+  // END SECTION :: reviews
+
+  // BEGIN SECTION :: about
+
+  section
+    .about
+      .container
+        .title-container
+          h2 О нас
+      .about__container
+        .container
+          .about__grid
+            .about__image
+              img(src="img/about.jpg", alt="")
+            .about__info
+              p Мы организовали доставку наших блюд по  Тестополису  в  режиме  «non  stop», 7  дней  в неделю,  чтобы  Вы  всегда  имели  возможность   насладиться  вкусами блюд японской и  европейской  кулинарии.  Сушевский -  это  команда  молодых профессионалов, которые  создают  и  совершенствуют  блюда  с  доставкой  по Тестополису каждый день.
+              p Мы принципиально не используем полуфабрикаты по любым позициям нашего меню! Для приготовления суши, роллов, блюд из лапши  и  пиццы  наши  повара используют только свежие ингридиенты от проверенных поставщиков.
+              a.about__btn(href="#") Читать далее
+
+  // END SECTION :: about
+
 
   //- // BEGIN SECTION :: form-block
   //- section#section-demo

@@ -5,6 +5,8 @@
 .selectric-wrapper
   position: relative
   cursor: pointer
+  display: inline-block
+  margin-bottom: -3px
 
 .selectric-responsive
   width: 100%
@@ -12,49 +14,43 @@
 .selectric
   // border: 1px solid #DDD
   // border-radius: 0px
-  background: #252525
+  // background: #252525
   position: relative
-  overflow: hidden
+  // overflow: hidden
+  padding: 0
+  margin: 0
+  line-height: 1
   .label
-    display: block
+    display: inline-block
     white-space: nowrap
     overflow: hidden
     text-overflow: ellipsis
-    margin: 0 38px 0 10px
-    font-size: 15px
     line-height: 1
-    font-family: $extrabold
-    color: #fff
-    padding: 22px 10px 23px
-    text-transform: uppercase
+    font-family: $regular
+    color: $colorRed
+    font-size: 14px
+    border-bottom: 1px dashed $colorRed
+    letter-spacing: 0.5px
+    color: $colorRed
+    // padding: 22px 10px 23px
     -webkit-user-select: none
     -moz-user-select: none
     -ms-user-select: none
     user-select: none
   .button
-    display: block
+    display: inline-block
     position: absolute
-    right: 17px
-    top: 21px
-    width: 15px
-    height: 15px
-    background: url(../../img/arrow-down.svg) center center no-repeat
-    background-size: contain
-    color: transparent
-    font-size: 0
+    right: -15px  
+    top: 1px
+    // width: 15px
+    // height: 15px
+    // background: url(../../img/arrow-down.svg) center center no-repeat
+    // background-size: contain
+    color: $colorRed
+    font-size: 15px
     text-align: center
     transform-origin: center center
     transition: all $transitionSpeed $ease
-
-.selectric-focus .selectric
-  border-color: #aaaaaa
-
-.selectric-hover .selectric
-  border-color: #c4c4c4
-  .button
-    color: #a2a2a2
-    &:after
-      border-top-color: #a2a2a2
 
 .selectric-open
   z-index: 99
@@ -62,6 +58,7 @@
     display: block
   .button
     transform: rotate(-180deg)
+    top: 2px
 
 .selectric-disabled
   filter: alpha(opacity = 50)
@@ -132,26 +129,25 @@
   bottom: 100%
 
 .selectric-items
+  width: auto !important
   ul
     list-style: none
     padding: 0
     margin: 0
-    font-size: 12px
-    line-height: 20px
-    min-height: 20px
+    font-size: 14px
   li
     list-style: none
     padding: 0
     margin: 0
-    font-size: 21px
+    font-size: 14px
     line-height: 1.4
-    min-height: 20px
-    display: block
-    padding: 10px 20px
-    color: #252525
+    display: inline-block
+    padding: 3px
+    color: $fontColor
     cursor: pointer
     font-family: $regular
     border-bottom: 1px solid #979797
+    width: 100%
     &.selected
       background: #E0E0E0
       color: #444
@@ -159,8 +155,10 @@
       background: #D0D0D0
       color: #444
     &:hover
-      background: #FF3B00
+      background: $colorRed
       color: #fff
+    &:last-child
+      border-bottom: none
   .disabled
     filter: alpha(opacity = 50)
     opacity: 0.5

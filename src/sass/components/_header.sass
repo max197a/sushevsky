@@ -1,10 +1,124 @@
 /* HEADER
 .header
-  position: fixed
+  position: static
   top: 0
   right: 0
   left: 0
   background: transparent
   z-index: 100
   transform: translate3d(0,0,0)
-  padding: 15px 0
+  .container
+    padding: 0 80px
+  &__options
+    padding: 12px 0
+    background: #dcdbdb
+    position: relative
+    z-index: 2
+    p
+      font-family: $regular
+      font-size: 15px
+      span
+        display: inline-block
+        margin: 0 10px
+  &__o-grid
+    display: flex
+    align-items: center
+    justify-content: flex-end
+  &__o-city
+    display: flex
+    align-items: center
+    margin-right: 74px
+  &__o-languages
+    display: flex
+    align-items: center
+    padding-right: 36px
+    a
+      font-size: 15px
+      font-family: $regular
+      color: $fontColor
+      display: inline-block
+      margin-right: 33px
+      transition: all $transitionSpeed $ease
+      &.is-active
+        color: $colorRed
+  &__wrapper
+    margin: 0 auto
+    width: 100%
+    display: flex
+    align-items: center
+    padding: 17px 10px 8px
+    background: #fff
+  &__logotype
+    max-width: 273px
+    height: auto
+    widht: 40%
+    margin-left: 6px
+  &__wrapper-grid
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__shop
+    display: flex
+    align-items: center
+    justify-content: space-between
+    border: 1px solid $fontColor
+    padding: 9px 15px 10px
+    background: $fontColor
+    overflow: hidden
+  &__shop-info
+    min-width: 141px
+    margin-right: 15px
+    p
+      font-family: $regular
+      font-size: 15px
+      color: #fff
+  &__shop-button
+    a
+      display: block
+      padding: 4px 15px
+      border: 1px solid $colorRed
+      background: $fontColor
+      font-family: $regular
+      font-size: 15px
+      color: #fff
+      transition: all $transitionSpeed $ease
+      &:hover
+        background: $colorRed
+  &__shop-avatar
+    margin-right: -15px
+    margin: -10px -15px -10px 15px
+    padding: 10px 9px 11px 10px
+    background: #fff
+    display: flex
+    align-items: center
+    justify-content: center
+    img
+      width: 33px
+      height: auto
+  &__phone
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: 6px
+    margin-right: -28px
+    img
+      margin-right: 25px
+      margin-top: -8px
+    p
+      font-size: 70px
+      font-family: $room
+      line-height: 1
+      position: relative
+      span
+        display: inline-block
+        line-height: 1
+        // letter-spacing: -3px
+        &.dot
+          margin: 0 3px
+      span.vertical
+        transform: rotate(-90deg)
+        font-size: 24px
+        position: absolute
+        left: -30px
+        top: 19px
+        letter-spacing: 0px

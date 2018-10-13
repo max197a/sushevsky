@@ -1,0 +1,42 @@
+.about
+  padding-top: 41px
+  .container
+    padding: 0 85px
+  &__grid
+    padding: 38px 0
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    margin-top: 49px
+  &__image
+    width: 43.8%
+    img
+      width: 100%
+      height: auto
+  &__info
+    width: 51%
+    p
+      font-family: $regular
+      line-height: 1.45
+      color: #fff
+      margin-bottom: 30px
+  &__container
+    background: url(../img/pattern.png) top left repeat
+    background-size: contain
+  &__btn
+    display: flex
+    max-width: 150px
+    align-items: center
+    justify-content: center
+    margin-left: auto
+    padding: 5px 10px
+    font-size: 18px
+    font-family: $regular
+    color: #fff
+    border: 1px solid #fff
+    background: $colorRed
+    margin-top: 50px
+    transition: all $transitionSpeed $ease
+    &:hover
+      background: #fff
+      color: $colorRed

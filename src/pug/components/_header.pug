@@ -1,8 +1,40 @@
 // HEADER :: START
+
 header.header
-  .container(data-aos='fade-down')
-    .header__wrapper
-      img(src="img/logotype.png", alt="", srcset="img/logotype@2x.png 2x" width="273")
+  .header__options(data-aos='fade-up')
+    .container
+      .header__o-grid
+        .header__o-city
+          p Ваш город
+            span -
+          select
+            option(value="val1") Москва
+            option(value="val2") Калининград
+            option(value="val3") Санкт-Петербург
+        .header__o-languages
+          a(href="#" js-language-button) RU
+          a.is-active(href="#" js-language-button) EN
+  .header__wrapper(data-aos='fade-up')
+    .container
+      .header__wrapper-grid
+        img.header__logotype(src="img/logotype.svg", alt="")
+        a.header__phone(href="tel:+4955555555")
+          img(src="img/phone.png", alt="")
+          p
+            span.vertical 495
+            span 555
+              span.dot •
+              | 55
+              span.dot •
+              | 55
+        .header__shop
+          .header__shop-info
+            p Корзина:
+            p 1 товар, 350 руб.
+          .header__shop-button
+            a(href="#") Оформить заказ
+          .header__shop-avatar
+            img(src="img/face-icon.png", alt="")
 
       
 // HEADER :: END
