@@ -1,6 +1,6 @@
 /* HEADER
 .header
-  position: static
+  position: relative
   top: 0
   right: 0
   left: 0
@@ -51,7 +51,7 @@
   &__logotype
     max-width: 273px
     height: auto
-    widht: 40%
+    width: 24%
     margin-left: 6px
   &__wrapper-grid
     display: flex
@@ -122,3 +122,138 @@
         left: -30px
         top: 19px
         letter-spacing: 0px
+  &__nav
+    display: flex
+    align-items: center
+    justify-content: center
+    ul
+      text-align: center
+      margin: 7px 0
+    a
+      font-size: 21px
+      font-family: $regular
+      color: #2b2b28
+      margin: 0 50px
+      transition: all $transitionSpeed $ease
+      &:hover
+        color: $colorRed
+  .hamburger
+    display: none
+
++r($desktop1268)
+  .header
+    .container
+      padding: 0 40px
+    &__logotype
+      // max-width: 220px
+    &__phone
+      margin-top: 8px
+      margin-right: 0
+      img
+        width: 35px
+        height: auto
+      p
+        font-size: 50px
+        span.vertical
+          font-size: 20px
+          top: 12px
+    &__shop
+      padding-top: 5px
+      padding-bottom: 5px
+    &__shop-button
+      a
+        display: flex
+        align-items: center
+        justify-content: center
+        max-width: 80px
+        text-align: center
+        line-height: 1.1
+
++r($desktop)
+  .header
+    &__wrapper
+      padding-left: 0
+      padding-right: 0
+    .container
+      padding: 0 20px
+
++r($tablet)
+  .header
+    .container
+      padding: 0 10px
+    .hamburger
+      display: block
+      padding: 0
+      transform: scale(0.7)
+      position: relative
+      z-index: 1000
+    &__logotype
+      width: 40%
+    &__phone
+      display: none
+    &__shop-button
+      display: none
+    &__options
+      display: none
+    &__wrapper
+      padding: 10px 0
+      position: relative
+      z-index: 100
+    &__shop
+      padding: 4px 15px 4px 5px
+    &__shop-info
+      min-width: 0
+      p
+        font-size: 10px
+        line-height: 1.2
+    &__shop-avatar
+      padding: 8px 5px
+      margin-left: 5px
+      img
+        width: 17px
+    &__nav
+      position: fixed
+      z-index: 90
+      left: 0
+      top: 0
+      width: 100%
+      min-height: 100vh
+      height: 100%
+      background: #fff
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+      left: -100%
+      transition: all $transitionSpeed $ease
+      &.is-active
+        left: 0
+      ul
+        padding-left: 0
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+      li
+        width: 100%
+      a
+        margin: 10px 0
+        display: inline-block
+        font-size: 18px
+        width: 100%
+    .selectric-wrapper
+      ul
+        margin: 0 !important
+      &.selectric-select-nav
+        padding: 0 50px
+        margin: 10px 0
+        width: 100%
+        .selectric
+          width: auto
+          display: inline-block
+        .label
+          font-size: 18px
+        .selectric-items
+          width: 100% !important
+          li
+            font-size: 18px

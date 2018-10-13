@@ -7,6 +7,26 @@
   cursor: pointer
   display: inline-block
   margin-bottom: -3px
+  ul
+    margin: 0 !important
+  &.selectric-select-nav
+    padding: 0 50px
+    .label
+      font-size: 21px
+      font-family: $regular
+      color: #2b2b28
+      border-bottom: none
+      letter-spacing: 0
+      transition: all $transitionSpeed $ease
+      display: flex
+      align-items: center
+      &:hover
+        color: $colorRed
+    .selectric-items
+      ul
+        font-size: 21px
+      li
+        font-size: 21px
 
 .selectric-responsive
   width: 100%
@@ -182,4 +202,4 @@
 
 +r($tablet)
   .selectric-items
-    position: static
+    // position: static

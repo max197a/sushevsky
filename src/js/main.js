@@ -28,6 +28,9 @@ $(document).ready(function() {
     initSelectric();
     initValidations();
     initSliders();
+
+    // development helper
+    _window.on("resize", debounce(setBreakpoint, 200));
   }
 
   // this is a master function which should have all functionality
@@ -51,6 +54,21 @@ $(document).ready(function() {
       refreshDebounceWait: 150,
       appendToBody: true
     });
+  }
+
+  // HAMBURGER TOGGLER
+  _document.on("click", "[js-hamburger]", function() {
+    $(this).toggleClass("is-active");
+    $(".header__nav").toggleClass("is-active");
+    $("body").toggleClass("is-fixed");
+    $("html").toggleClass("is-fixed");
+  });
+
+  _document.on("click", ".header__menu-link, .header__btn", closeMobileMenu);
+
+  function closeMobileMenu() {
+    $("[js-hamburger]").removeClass("is-active");
+    $(".header__mobile").removeClass("is-active");
   }
 
   // Prevent # behavior
@@ -488,5 +506,27 @@ $(document).ready(function() {
   function triggerBody() {
     $(window).scroll();
     $(window).resize();
+  }
+
+  //////////
+  // DEVELOPMENT HELPER
+  //////////
+  function setBreakpoint() {
+    var wHost = window.location.host.toLowerCase();
+    var displayCondition =
+      wHost.indexOf("localhost") >= 0 || wHost.indexOf("surge") >= 0;
+    if (displayCondition) {
+      var wWidth = _window.width();
+
+      var content = "<div class='dev-bp-debug'>" + wWidth + "</div>";
+
+      $(".page").append(content);
+      setTimeout(function() {
+        $(".dev-bp-debug").fadeOut();
+      }, 1000);
+      setTimeout(function() {
+        $(".dev-bp-debug").remove();
+      }, 1500);
+    }
   }
 });

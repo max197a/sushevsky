@@ -17,6 +17,9 @@ header.header
   .header__wrapper(data-aos='fade-up')
     .container
       .header__wrapper-grid
+        .hamburger.hamburger--spin(js-hamburger)
+          .hamburger-box
+            .hamburger-inner
         img.header__logotype(src="img/logotype.svg", alt="")
         a.header__phone(href="tel:+4955555555")
           img(src="img/phone.png", alt="")
@@ -35,6 +38,44 @@ header.header
             a(href="#") Оформить заказ
           .header__shop-avatar
             img(src="img/face-icon.png", alt="")
+
+  // BEGIN SECTION :: free
+
+  .free(data-aos='fade-down')
+    .container
+      p Бесплатная доставка при заказе от 900 руб.
+      a.free__phone(href="tel:+4955555555")
+        p
+          span.vertical 495
+          span 555
+            span.dot •
+            | 55
+            span.dot •
+            | 55
+  
+  // END SECTION :: free
+
+  .header__nav
+    .container(data-aos='fade-up')
+      ul
+        li
+          a(href="#") Главная
+        li
+          select.select-nav
+            option(value="val1") Меню
+            option(value="val2") Меню №1
+            option(value="val3") Меню №2
+            option(value="val4") Меню №3
+        li
+          select.select-nav
+            option(value="val1-1") Акции
+            option(value="val1-2") Акции №1
+            option(value="val1-3") Акции №2
+            option(value="val1-4") Акции №3
+        li
+          a(href="#") О нас
+        li
+          a(href="#") Обратная связь
 
       
 // HEADER :: END

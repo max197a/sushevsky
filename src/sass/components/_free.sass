@@ -10,3 +10,44 @@
     width: 100%
     font-family: $regular
     margin: 0
+  &__phone
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: 2px
+    max-width: 170px
+    position: relative
+    margin: 0 auto
+    display: none
+    img
+      margin-right: 25px
+      margin-top: -8px
+    p
+      font-size: 32px
+      font-family: $room
+      line-height: 1
+      position: relative
+      color: #fff
+      span
+        display: inline-block
+        line-height: 1
+        // letter-spacing: -3px
+        &.dot
+          margin: 0 3px
+      span.vertical
+        transform: rotate(-90deg)
+        font-size: 12px
+        position: absolute
+        left: -8px
+        top: 9px
+        letter-spacing: 0px
+
++r($tablet)
+  .free
+    padding: 8px 0 5px
+    p
+      display: none
+    &__phone
+      display: flex
+      p
+        display: block
