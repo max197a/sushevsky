@@ -3,3 +3,5 @@ ProjectTitle: Sushevsky
 PageList:
 - file: home.html
   ready: 20
+- file: vacancies.html
+  ready: 20

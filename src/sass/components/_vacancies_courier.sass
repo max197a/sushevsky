@@ -1,0 +1,41 @@
+.courier
+  background: url(../img/pattern.png) top left repeat
+  background-size: 20%
+  padding-bottom: 32px
+  .container
+    padding: 0 160px
+    h2
+      color: #fff
+      &:after,
+      &:before
+        display: none
+  &__grid
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    padding-top: 6px
+  &__list
+    width: 49%
+    p
+      font-family: $regular
+      line-height: 1.25
+      color: #fff
+      font-size: 15px
+
++r($desktop1268)
+  .courier
+    .container
+      padding: 0 40px
+
++r($desktop)
+  .courier
+    .container
+      padding: 0 20px
+
++r($tablet)
+  .courier
+    background-size: 100%
+    &__grid
+      flex-wrap: wrap
+    &__list
+      width: 100%

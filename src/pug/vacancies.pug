@@ -1,0 +1,98 @@
+---
+title: Sushevsky Vacancies
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: slider
+
+  section(data-aos='fade-up')
+    .main-slider
+      .container
+        .slider(js-main-slider)
+          .item
+            img(src="img/slide-1.jpg", alt="")
+          .item
+            img(src="img/slide-1.jpg", alt="")
+          .item
+            img(src="img/slide-1.jpg", alt="")
+          .item
+            img(src="img/slide-1.jpg", alt="")
+  
+  // END SECTION :: slider
+
+  // BEGIN SECTION :: vacancies
+
+  section
+    .vacancies
+      .container
+        .title-container
+          h2 Список вакансий
+        .vacancies__grid
+          .vacancies__item
+            a(href="#") 
+              span Официант (3)
+              span.date 20.08.2018
+          .vacancies__item
+            a(href="#") 
+              span Сушеф (1)
+              span.date 20.08.2018
+          .vacancies__item
+            a(href="#") 
+              span Повар (1)
+              span.date 20.08.2018
+          .vacancies__item
+            a(href="#") 
+              span Курьер  (3)
+              span.date 20.08.2018
+          .vacancies__item
+            a(href="#") 
+              span Программист (1)
+              span.date 20.08.2018
+          .vacancies__item
+            a(href="#") 
+              span Разнорабочий (1)
+              span.date 20.08.2018
+  
+  // END SECTION :: vacancies
+
+  // BEGIN SECTION :: courier
+
+  section
+    .courier
+      .container
+        .title-container
+          h2 Курьер
+        .courier__grid
+          .courier__list
+            p Требования
+            p - Личный автомобиль; 
+            p - Желание работать.
+            p Обязанности
+            p - Доставка заказов.
+          .courier__list
+            p Условия
+            p Мы предлагаем: 
+            p - Выплаты стабильные, ежедневные, еженедельные! 
+            p - Смены дневные и ночные по 12ч; 
+            p - Графики и подработки  обсуждаются индивидуально. 
+  
+  // END SECTION :: courier
+
+  // BEGIN SECTION :: vacancies-phone
+
+  section
+    .vacancies-phone
+      .container
+        .phone-container
+          p.phone-title Отдел кадров:
+          a.vacancies-phone__phone(href="tel:+4955555555")
+            p
+              span.vertical 495
+              span 555
+                span.dot •
+                | 55
+                span.dot •
+                | 55
+  
+  // END SECTION :: vacancies-phone

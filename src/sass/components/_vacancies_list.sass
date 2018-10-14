@@ -1,0 +1,53 @@
+.vacancies
+  padding-bottom: 40px
+  .container
+    padding: 0 140px
+  &__grid
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+    margin-top: 17px
+  &__item
+    width: 30%
+    max-width: 245px
+    margin: 6px 1.5%
+    a
+      display: flex
+      align-items: center
+      justify-content: space-between
+      &:hover
+        span
+          color: $colorRed
+      span
+        font-family: $extrabold
+        font-size: 18px
+        color: $fontColor
+        transition: all $transitionSpeed $ease
+        &.date
+          color: $colorRed
+          font-family: $regular
+          font-size: 12px
+          display: inline-block
+          margin-left: 10px
+
+
+
+
++r($desktop1268)
+  .vacancies
+    .container
+      padding: 0 40px
+
++r($desktop)
+  .vacancies
+    .container
+      padding: 0 20px
+
++r($desktop)
+  .vacancies
+    padding-bottom: 25px
+    &__item
+      width: 100%
+      margin: 5px 0
+      max-width: 100%

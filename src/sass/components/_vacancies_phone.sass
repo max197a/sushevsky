@@ -1,0 +1,48 @@
+.vacancies-phone
+  padding: 16px 0 0
+  .phone-container
+    margin: 0 auto
+    text-align: center
+  .phone-title
+    font-family: $room
+    font-size: 24px
+    color: $fontColor
+    line-height: 1.1
+  &__phone
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: 2px
+    p
+      font-size: 62px
+      font-family: $room
+      line-height: 1
+      position: relative
+      color: $fontColor
+      span
+        display: inline-block
+        line-height: 1
+        // letter-spacing: -3px
+        &.dot
+          margin: 0 3px
+      span.vertical
+        transform: rotate(-90deg)
+        font-size: 24px
+        position: absolute
+        left: -30px
+        top: 16px
+        letter-spacing: 0px
+
++r($tablet)
+  .vacancies-phone
+    padding: 15px 0
+    .phone-title
+      font-size: 18px
+    &__phone
+      p
+        font-size: 32px
+        span.vertical
+          font-size: 12px
+          left: -18px
+          top: 9px
+          letter-spacing: 0px
