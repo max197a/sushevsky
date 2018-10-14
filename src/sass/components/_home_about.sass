@@ -40,6 +40,31 @@
     &:hover
       background: #fff
       color: $colorRed
+  &--page
+    padding-top: 0
+    .container
+      padding: 0 118px
+    .about__image
+      width: 46.5%
+    .about__info
+      width: 47%
+    .about__container
+      background: none
+    .about__btn
+      display: none
+    .about__info
+      p
+        color: $fontColor
+        line-height: 1.25
+    .about__grid
+      align-items: center
+      padding: 0
+      margin-top: 0
+      margin-bottom: 33px
+      &:last-child
+        margin-bottom: 22px
+      &--reverse
+        flex-direction: row-reverse
 
 +r($desktop1268)
   .about
@@ -54,3 +79,19 @@
 +r($tablet)
   .about
     display: none
+    &--page
+      display: block
+      .about__grid
+        flex-wrap: wrap
+        margin-bottom: 20px
+        &--reverse
+          flex-direction: row
+      .about__image
+        width: 100%
+        max-width: 400px
+        margin-bottom: 20px
+      .about__info
+        width: 100%
+        p
+          line-height: 1.25
+          margin-bottom: 0

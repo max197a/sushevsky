@@ -5,3 +5,5 @@ PageList:
   ready: 20
 - file: vacancies.html
   ready: 20
+- file: about.html
+  ready: 20
