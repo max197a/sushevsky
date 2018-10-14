@@ -11,3 +11,5 @@ PageList:
   ready: 20
 - file: registration.html
   ready: 20
+- file: cabinet.html
+  ready: 20

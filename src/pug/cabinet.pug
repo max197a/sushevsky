@@ -1,0 +1,55 @@
+---
+title: Sushevsky Cabinet
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: cabinet
+
+  section
+    .container
+      .title-container
+        h2 Личный кабинет
+    .cabinet
+      .container
+        form(action="#")
+          p Личная информация
+          .cabinet__grid
+            .cabinet__left
+              .input-container
+                label(for="f1") ФИО*
+                input#f1(type="text" required)
+              .input-container
+                label(for="f2") Телефон*
+                input#f2(type="text" required)
+              .input-container
+                label(for="f3") E-mail*
+                input#f3(type="text" required)
+              .input-container
+                label(for="f4") Адрес доставки*
+                input#f4(type="text" required)
+              .input-container
+                label.checkbox
+                  input(type='checkbox' required)
+                  .checkbox__text Я согласен с условиями использования персональных данных*
+            .cabinet__right
+              .cabinet__socials
+                p Привязать к аккаунту соцсеть:
+                .cabinet__links
+                  a(href="#")
+                  a(href="#")
+                  a(href="#")
+              
+          .cabinet__grid.cabinet__grid--buttons
+            .cabinet__left
+              .input-container
+                button.btn Сбросить пароль
+            .cabinet__right
+              .cabinet__right--grid
+                .input-container
+                  button.btn.btn--cancel Отменить изменения
+                .input-container
+                  input.btn(type="submit" value="Сохранить")
+
+
+  // END SECTION :: cabinet
