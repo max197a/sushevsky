@@ -61,11 +61,26 @@
     font-size: 15px
     line-height: 1.2
     color: #2b2b28
+  &--page
+    padding-top: 0
+    .reviews__item
+      margin-bottom: 10px
+      margin-top: 34px
+      width: 30%
+      max-width: 315px
+      margin: 1.35% 1.5%
+    .reviews__info
+      min-height: 130px 
+      
 
 +r($desktop1268)
   .reviews
     .container
       padding: 0 40px
+    &--page
+      .reviews__grid
+        margin: 0 -1.5%
+        width: calc(100% + 3%)
 
 +r($desktop)
   .reviews
@@ -75,3 +90,26 @@
 +r($tablet)
   .reviews
     display: none
+    &--page
+      display: block
+      .reviews__grid
+        margin: 0
+        width: 100%
+      .reviews__item
+        width: 100%
+        margin: 22px 0
+        max-width: 100%
+      .reviews__title
+        font-size: 16px
+        padding-left: 25px
+        &:before
+          width: 20px
+          height: 22px
+          top: -6px
+      .reviews__date
+        font-size: 11px
+      .reviews__head
+        min-height: 36px
+        margin-bottom: 5px
+      .reviews__info
+        min-height: 0

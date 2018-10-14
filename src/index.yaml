@@ -7,3 +7,5 @@ PageList:
   ready: 20
 - file: about.html
   ready: 20
+- file: reviews.html
+  ready: 20
