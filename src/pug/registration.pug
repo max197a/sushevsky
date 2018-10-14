@@ -1,0 +1,41 @@
+---
+title: Sushevsky Registration
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: registration
+
+  section
+    .container
+      .title-container
+        h2 Регистрация
+    .registration
+      .container
+        form(action="#")
+          .registration__grid
+            .registration__left
+              .input-container
+                label(for="f1") ФИО*
+                input#f1(type="text" required)
+              .input-container
+                label(for="f2") Телефон*
+                input#f2(type="text" required)
+              .input-container
+                label(for="f3") E-mail*
+                input#f3(type="text" required)
+              .input-container
+                label.checkbox
+                  input(type='checkbox' required)
+                  .checkbox__text Я согласен с условиями использования персональных данных*
+              .registration__captcha
+                .input-container
+                  input(type="text" placeholder="Введите символы")
+                .registration__captcha-image
+                  img(src="img/captcha.jpg", alt="")
+            .registration__right
+              .input-container
+                input.btn(type="submit" value="Зарегистрироваться")
+
+
+  // END SECTION :: registration

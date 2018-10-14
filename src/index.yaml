@@ -9,3 +9,5 @@ PageList:
   ready: 20
 - file: reviews.html
   ready: 20
+- file: registration.html
+  ready: 20
