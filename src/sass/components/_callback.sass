@@ -1,0 +1,163 @@
+.callback
+  background: url(../img/pattern.png) top left repeat
+  background-size: 20%
+  padding-bottom: 64px
+  margin-bottom: 8px
+  margin-top: 5px
+  p
+    font-size: 15px
+    color: #fff
+    padding: 26px 50px 0px
+    font-family: $regular
+    text-align: center
+  .container
+    padding: 0 168px
+  &__grid
+    padding-top: 29px
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+  &__left
+    width: 48%
+  .input-container
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    margin-bottom: 23px
+    label
+      font-size: 15px
+      color: #fff
+      line-height: 1.2
+      font-family: $regular
+    input
+      border: 1px solid #fff
+      background: #fff
+      font-size: 16px
+      padding: 8px
+      width: 100%
+      font-family: $regular
+      margin-top: 4px
+    textarea
+      border: 1px solid #fff
+      background: #fff
+      font-size: 16px
+      padding: 8px
+      width: 100%
+      font-family: $regular
+      resize: none
+      height: 115px
+      margin-top: 4px
+    .checkbox input
+      position: absolute
+      z-index: -1
+      opacity: 0
+      margin: 10px 0 0 20px
+      width: 0 !important
+
+    .checkbox__text
+      position: relative
+      padding: 0 0 0 25px
+      cursor: pointer
+      margin-top: 5px
+      font-size: 14px
+      &:before
+        content: ''
+        position: absolute
+        top: -2px
+        left: 0
+        width: 15px
+        height: 15px
+        display: block
+        border: 1px solid #fff
+      &:after
+        display: block
+        width: 8px
+        height: 4px
+        border: 1px solid #fff
+        position: absolute
+        content: ''
+        left: 4px
+        top: 3px
+        border-top: none
+        border-right: none
+        transform: rotate(-45deg)
+        opacity: 0
+        transition: all $transitionSpeed $ease
+    .checkbox input
+      &:checked + .checkbox__text
+        &:after
+          opacity: 1
+  &__captcha
+    display: flex
+    align-items: center
+    justify-content: space-between
+    .input-container
+      margin: 0
+      width: 100%
+      input
+        margin: 0
+        width: 100%
+  &__captcha-image
+    margin-left: 30px
+  &__right
+    width: 48%
+    .btn
+      display: flex
+      align-items: center
+      justify-content: center
+      max-width: 240px
+      width: 100%
+      padding: 8px 15px
+      font-size: 18px
+      margin: 0 0 0 auto
+      font-family: $regular
+      color: #fff
+      background: $colorRed
+      transition: all $transitionSpeed $ease
+      border: 1px solid #fff
+      cursor: pointer
+      &:hover
+        background: #fff
+        color: $colorRed
+
++r($desktop1268)
+  .callback
+    .container
+      padding: 0 40px
+
++r($desktop)
+  .callback
+    .container
+      padding: 0 20px
+
++r($tablet)
+  .callback
+    background-size: 100%
+    p
+      padding: 25px 0 0
+      margin-bottom: -10px
+    .container
+      padding: 0 20px
+    &__grid
+      flex-wrap: wrap
+    &__left
+      width: 100%
+    &__right
+      width: 100%
+      // margin-top: 15px
+      .btn
+        margin: 15px auto 0
+    &__captcha
+      margin-top: 0
+      .input-container
+        width: 55%
+    &__captcha-image
+      width: 40%
+      margin-left: 0
+      display: flex
+      align-items: center
+      img
+        width: 100%
+        height: auto
+        max-width: 185px

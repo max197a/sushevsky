@@ -19,3 +19,5 @@ PageList:
   ready: 20
 - file: delivery.html
   ready: 20
+- file: callback.html
+  ready: 20

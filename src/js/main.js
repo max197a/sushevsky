@@ -28,6 +28,7 @@ $(document).ready(function() {
     initSelectric();
     initValidations();
     initSliders();
+    initFile();
 
     // development helper
     _window.on("resize", debounce(setBreakpoint, 200));
@@ -175,6 +176,15 @@ $(document).ready(function() {
   _document.on("click", "[close-form]", function() {
     $(".form-block-hidden").slideToggle();
   });
+
+  //////////
+  // input type file
+  //////////
+  function initFile() {
+    setTimeout(function() {
+      $("[js-file]").styler();
+    }, 100);
+  }
 
   //////////
   // SLIDERS

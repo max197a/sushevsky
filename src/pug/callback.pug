@@ -1,0 +1,59 @@
+---
+title: Sushevsky Registration
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: callback
+
+  section
+    .container
+      .title-container
+        h2 Обратная связь
+    .callback
+      .container
+        form(action="#")
+          p Нам очень важны отзывы о нашей работе, поэтому просим уделить минуту времени и высказать Ваше мнение о нас!
+          p Отзыв о качестве обслуживания Вы можете направить нам с помощью приведенной ниже формы.
+          .callback__grid
+            .callback__left
+              .input-container
+                label(for="f1") ФИО*
+                input#f1(type="text" required)
+              .input-container
+                label(for="f2") Телефон*
+                input#f2(type="text" required)
+              .input-container
+                label(for="f3") E-mail*
+                input#f3(type="text" required)
+              .input-container
+                label.checkbox
+                  input(type='checkbox' required)
+                  .checkbox__text Я согласен с условиями использования персональных данных*
+            .callback__right
+              .input-container
+                label(for="f4") Тема сообщения*
+                select.-callback#f4
+                  option(value="val1") Доставка №1
+                  option(value="val1") Доставка №2
+                  option(value="val1") Доставка №3
+              .input-container
+                label(for="f5") Сообщение
+                textarea#f5
+              .input-container
+                label(for="f6") Прикрепите файл, если есть
+                input#f6(type="file" js-file)
+
+          .callback__grid
+            .callback__left
+              .callback__captcha
+                .input-container
+                  input(type="text" placeholder="Введите символы")
+                .callback__captcha-image
+                  img(src="img/captcha.jpg", alt="")
+            .callback__right
+              .input-container
+                button.btn Отправить
+
+
+  // END SECTION :: callback

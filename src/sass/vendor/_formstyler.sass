@@ -1,0 +1,46 @@
+.jq-file
+  position: relative
+  display: inline-block
+  overflow: hidden
+  
+  input
+    position: absolute
+    top: 0
+    right: 0
+    height: auto
+    margin: 0
+    padding: 0
+    opacity: 0
+    font-size: 100px
+    line-height: 1em
+
+.jq-file__name
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
+
+.jq-file
+  width: 100%
+  margin-top: 4px
+  input
+    cursor: pointer
+
+.jq-file__name
+  box-sizing: border-box
+  width: 100%
+  background: #fff
+  font-family: $regular
+  color: $fontColor
+  font-size: 16px
+  min-height: 36px
+  padding: 10px 80px 8px 8px
+
+.jq-file__browse
+  position: absolute
+  top: 11px
+  right: 10px
+  line-height: 0
+  background: #fff
+  font-family: $extrabold
+  color: $colorRed
+  font-size: 40px

@@ -28,6 +28,36 @@
       li
         font-size: 21px
 
+  &.selectric--callback
+    width: 100%
+    margin-top: 4px
+    .label
+      border: 1px solid #fff
+      background: #fff
+      font-size: 16px
+      padding: 9px
+      width: 100%
+      color: $fontColor
+      font-family: $regular
+    .selectric-items
+      width: 100% !important
+      top: 97%
+      ul
+        font-size: 16px
+      li
+        font-size: 16px
+        padding: 5px 10px
+        &:last-child
+          border-bottom: 1px solid #979797
+    .button
+      right: 12px
+      top: 50%
+      transform: translateY(-50%)
+    &.selectric-open
+      .button
+        top: 53%
+        transform: translateY(-50%) rotate(-180deg)
+
 .selectric-responsive
   width: 100%
 
