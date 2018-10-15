@@ -21,3 +21,5 @@ PageList:
   ready: 20
 - file: callback.html
   ready: 20
+- file: pay.html
+  ready: 20

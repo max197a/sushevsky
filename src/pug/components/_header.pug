@@ -1,5 +1,7 @@
 // HEADER :: START
 
+.header-container
+
 header.header
   .header__options(data-aos='fade-up')
     .container
@@ -60,23 +62,23 @@ header.header
     .container(data-aos='fade-up')
       ul
         li
-          a(href="#") Главная
+          a(href="/home.html") Главная
+        li
+          select.select-nav(onchange="location = this.value;")
+            option(value="/home.html") Меню
+            option(value="/home.html") Меню №1
+            option(value="/home.html") Меню №2
+            option(value="/home.html") Меню №3
         li
           select.select-nav
-            option(value="val1") Меню
-            option(value="val2") Меню №1
-            option(value="val3") Меню №2
-            option(value="val4") Меню №3
+            option(value="/share.html") Акции
+            option(value="/share.html") Акции №1
+            option(value="/share.html") Акции №2
+            option(value="/share.html") Акции №3
         li
-          select.select-nav
-            option(value="val1-1") Акции
-            option(value="val1-2") Акции №1
-            option(value="val1-3") Акции №2
-            option(value="val1-4") Акции №3
+          a(href="/about.html") О нас
         li
-          a(href="#") О нас
-        li
-          a(href="#") Обратная связь
+          a(href="/callback.html") Обратная связь
 
       
 // HEADER :: END

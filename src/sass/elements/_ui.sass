@@ -1,80 +1,71 @@
 // UI
 
-
-// WORKS KIND OF bootstrap - group have label and input
-.ui-group
-  position: relative
-  margin-bottom: 20px
+.input-container
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: flex-start
+  margin-bottom: 23px
   label
-    display: block
-    margin-bottom: 10px
-  input, textarea
-    display: block
-    width: 100%
-    -webkit-appearance: none
-    background: white
-    color: $grayColor
-    border: 1px solid $borderColor
-    border-radius: 4px
-    padding: 12px 15px
-  textarea
-    resize: vertical
-
-
-// Checkbox
-.ui-checkbox
+    font-size: 15px
+    color: #fff
+    line-height: 1.2
+    font-family: $regular
   input
-    display: none
-    width: 0.1px
-    height: 0.1px
-    opacity: 0
-    position: absolute
-    top: 0
-    left: 0
-    &:checked
-      + label
-        &::before
-          border-color: $colorGreen
-        &::after
-          transform: translateY(-50%) scale(1)
-  label
-    display: block
+    border: 1px solid #fff
+    background: #fff
+    font-size: 16px
+    padding: 8px
     width: 100%
+    font-family: $regular
+    margin-top: 4px
+  textarea
+    border: 1px solid #fff
+    background: #fff
+    font-size: 16px
+    padding: 8px
+    width: 100%
+    font-family: $regular
+    resize: none
+    height: 115px
+    margin-top: 4px
+  .checkbox input
+    position: absolute
+    z-index: -1
+    opacity: 0
+    margin: 10px 0 0 20px
+    width: 0 !important
+
+  .checkbox__text
     position: relative
+    padding: 0 0 0 25px
     cursor: pointer
-    &::before
+    margin-top: 5px
+    font-size: 14px
+    &:before
+      content: ''
       position: absolute
+      top: -2px
       left: 0
-      top: 50%
-      transform: translateY(-50%)
-      display: inline-block
-      content: ' '
-      size: 20px
-      background-color: white
-      border: 1px solid #AFB7C0
-      border-radius: 4px
-      cursor: pointer
-      vertical-align: middle
-      cursor: pointer
-      transition: all $transitionSpeed ease-in-out
-    &::after
+      width: 15px
+      height: 15px
+      display: block
+      border: 1px solid #fff
+    &:after
+      display: block
+      width: 8px
+      height: 4px
+      border: 1px solid #fff
       position: absolute
-      left: 6px
-      top: 50%
-      transform: translateY(-50%) scale(0)
-      display: inline-block
-      content: ' '
-      size: 10px
-      background: $colorGreen
-      border-radius: 50%
-      // background-image: svg-load('../../images/svg/checkbox.svg')
-      // background-repeat: no-repeat
-      // background-position: center
-      transition: transform .2s ease
-    span
-      display: inline-block
-      padding-left: 35px
-      vertical-align: top
-      line-height: 1.3
-      font-size: 14px
-      cursor: pointer
+      content: ''
+      left: 4px
+      top: 3px
+      border-top: none
+      border-right: none
+      transform: rotate(-45deg)
+      opacity: 0
+      transition: all $transitionSpeed $ease
+  .checkbox input
+    &:checked + .checkbox__text
+      &:after
+        opacity: 1
