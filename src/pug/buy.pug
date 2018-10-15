@@ -1,0 +1,132 @@
+---
+title: Sushevsky buy
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: buy
+
+  section
+    .title-container
+      h2 Корзина
+    .buy
+      .container
+        form(action="#")
+          .buy__grid
+            .buy__left
+              p Мой заказ:
+              table
+                tr
+                  td Блюдо 1
+                  td 1
+                  td 170 руб.
+                tr
+                  td Блюдо 2
+                  td 2
+                  td 230 руб.
+                tr
+                  td Напиток 1
+                  td 1
+                  td 70 руб.
+                tr
+                  td Соус 1
+                  td 3
+                  td 0 руб.
+                tr
+                  td Хлеб
+                  td 1
+                  td 50 руб.
+                
+                tr.weight-row.margin-row
+                  td Сумма заказа
+                  td 
+                  td 520 руб.
+              .buy__left-container
+                p Способ оплаты:
+                .input-container
+                  label.checkbox
+                    input(type='checkbox' required)
+                    .checkbox__text Наличными курьеру
+                .input-container
+                  label.checkbox
+                    input(type='checkbox' required)
+                    .checkbox__text Банковской картой на сайте
+              .buy__left-container
+                .input-container
+                  label.checkbox
+                    input(type='checkbox' required)
+                    .checkbox__text Я согласен с условиями использования персональных данных*
+                .input-container
+                  label.checkbox
+                    input(type='checkbox' required)
+                    .checkbox__text Я согласен с условиями доставки*
+            .buy__right
+              .input-container
+                label(for="f1") ФИО*
+                input#f1(type="text" required)
+              .input-container
+                label(for="f2") Телефон*
+                input#f2(type="text" required)
+              .input-container
+                label(for="f3") E-mail*
+                input#f3(type="text" required)
+              .input-container.input-container--select
+                label(for="f4") Адрес доставки*
+                  select.-callback#f4
+                    option(value="val1-1") Выберите адрес #1
+                    option(value="val1-2") Выберите адрес #2
+                    option(value="val1-3") Выберите адрес #3
+              .buy__grid
+                .input-container.buy__input-item
+                  label(for="f5") Город*
+                  input#f5(type="text" required)
+                .input-container.buy__input-item
+                  label(for="f6") Улица*
+                  input#f6(type="text" required)
+              .buy__grid
+                .input-container.buy__input-item
+                  label(for="f7") Дом*
+                  input#f7(type="text" required)
+                .input-container.buy__input-item
+                  label(for="f8") Корпус*
+                  input#f8(type="text" required)
+              .buy__grid
+                .input-container.buy__input-item
+                  label(for="f9") Подьезд*
+                  input#f9(type="text" required)
+                .input-container.buy__input-item
+                  label(for="f10") Квартира*
+                  input#f10(type="text" required)
+              .input-container
+                label(for="f11") Комментарий
+                input#f11(type="text")
+              .buy__left-container
+                p Способ оплаты:
+                .input-container
+                  label.checkbox
+                    input(type='checkbox' required)
+                    .checkbox__text Наличными курьеру
+                .input-container
+                  label.checkbox
+                    input(type='checkbox' required)
+                    .checkbox__text Банковской картой на сайте
+              .buy__left-container
+                .input-container
+                  label.checkbox
+                    input(type='checkbox' required)
+                    .checkbox__text Я согласен с условиями использования персональных данных*
+                .input-container
+                  label.checkbox
+                    input(type='checkbox' required)
+                    .checkbox__text Я согласен с условиями доставки*
+          .buy__buttons
+            .buy__captcha
+              .input-container
+                input(type="text" placeholder="Введите символы")
+              .buy__captcha-image
+                img(src="img/captcha.jpg", alt="")
+            .input-container.input-container--submit-buy
+              input.btn(type="submit" value="Заказать")
+      
+  
+  // END SECTION :: buy

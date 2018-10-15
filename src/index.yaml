@@ -23,3 +23,5 @@ PageList:
   ready: 20
 - file: pay.html
   ready: 20
+- file: buy.html
+  ready: 20
