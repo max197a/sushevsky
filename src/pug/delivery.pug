@@ -1,0 +1,59 @@
+---
+title: Sushevsky Delivery
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: delivery
+
+  section
+    .delivery
+      .container
+        .title-container
+          h2 Доставка
+        .delivery__grid
+          .delivery__item
+            .delivery__image
+              img(src="img/icon-1.png", alt="")
+            .delivery__info
+              p.delivery__title Круглосуточно
+              p.delivery__about Мы работаем 24 часа в сутки 7 дней в неделю, 365 дней в году
+          .delivery__item
+            .delivery__image
+              img(src="img/icon-2.png", alt="")
+            .delivery__info
+              p.delivery__title Минут
+              p.delivery__about В течении этого времени заказ будет доставлен
+          .delivery__item
+            .delivery__image
+              img(src="img/icon-3.png", alt="")
+            .delivery__info
+              p.delivery__title Бесплатно
+              p.delivery__about При заказе на сумму от 900р доставку осуществляем бесплатно.
+      .container.container--big
+        .delivery__map
+          p.delivery__map-title КАРТА ДОСТАВКИ
+          .delivery__map-container
+            iframe(src='https://yandex.ua/map-widget/v1/?um=constructor%3Af1c0ad0c8bfe0ae94b6153b16a1d037a0686b6eae456b6a8b2a8caa97b8a7e3e&source=constructor', width='100%', height='100%', frameborder='0')
+      .container
+        .ways
+          .title-container
+            h2 СПОСОБЫ ОПЛАТЫ
+          .ways__grid
+            .ways__item
+              .ways__image
+                img(src="img/cash.png", alt="")
+              .ways__info
+                p Наличными
+                p Оплата наличными курьеру
+            .ways__item
+              .ways__image
+                img(src="img/cards.png", alt="")
+              .ways__info
+                p Банковской картой 
+                  br
+                  | с помощью интернет-платежа
+                p При оформлении заказа на сайте (сервис доступен для карт: Visa, MasterCard).
+
+        
+  // END SECTION :: delivery

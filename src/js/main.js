@@ -146,28 +146,6 @@ $(document).ready(function() {
   });
 
   ////////////////////
-  // CHANGE TITLE LOGIN PAGE
-  ////////////////////
-
-  ////////////////////
-  // CHANGE MAPS
-  ////////////////////
-
-  _document.on("click", "[js-open-lit]", function() {
-    $(".contacts__map").removeClass("is-active");
-    $(".lit-map").addClass("is-active");
-  });
-
-  _document.on("click", "[js-open-usa]", function() {
-    $(".contacts__map").removeClass("is-active");
-    $(".usa-map").addClass("is-active");
-  });
-
-  ////////////////////
-  // CHANGE MAPS
-  ////////////////////
-
-  ////////////////////
   // SHOW PASSWORD TOGGLE
   ////////////////////
 
