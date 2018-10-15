@@ -15,3 +15,5 @@ PageList:
   ready: 20
 - file: menu.html
   ready: 20
+- file: share.html
+  ready: 20

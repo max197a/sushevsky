@@ -1,0 +1,56 @@
+.share-p
+  .container
+    padding: 0 130px
+  &__grid
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    flex-wrap: wrap
+  &__item
+    width: 30%
+    max-width: 300px
+    margin: 0 1.5% 15px
+  &__image
+    width: 100%
+    max-height: 205px
+    overflow: hidden
+    img
+      width: 100%
+      height: auto
+  &__info
+    max-height: 160px
+    height: 100%
+    margin-top: 20px
+  &__title
+    font-size: 16px
+    font-family: $extrabold
+    color: $fontColor
+  &__about
+    font-family: $regular
+    font-size: 14px
+    margin-top: 5px
+
++r($desktop1268)
+  .share-p
+    .container
+      padding: 0 40px
+
++r($desktop)
+  .share-p
+    .container
+      padding: 0 40px
+
++r($tablet)
+  .share-p
+    .container
+      padding: 0 20px
+    &__item
+      width: 100%
+      margin: 10px 0
+      max-width: 100%
+    &__image
+      max-width: 320px
+      width: 70%
+      img
+        width: 100%
+        height: auto
