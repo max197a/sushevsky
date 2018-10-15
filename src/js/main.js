@@ -132,6 +132,19 @@ $(document).ready(function() {
       .fadeIn();
   });
 
+  _document.on("click", "[js-menu-p-tab]", function(e) {
+    e.preventDefault();
+    var $self = $(this),
+      tabIndex = $self.index();
+    $self.siblings().removeClass("is-active");
+    $self.addClass("is-active");
+    $(".menu-p__tab")
+      .removeClass("is-active")
+      .css("display", "none")
+      .eq(tabIndex)
+      .fadeIn();
+  });
+
   ////////////////////
   // CHANGE TITLE LOGIN PAGE
   ////////////////////

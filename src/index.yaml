@@ -13,3 +13,5 @@ PageList:
   ready: 20
 - file: cabinet.html
   ready: 20
+- file: menu.html
+  ready: 20

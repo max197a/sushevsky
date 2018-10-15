@@ -1,0 +1,116 @@
+.menu-p
+  padding-top: 0
+  &__links
+    margin: 5px auto
+    text-align: center
+    a
+      font-size: 14px
+      font-family: $bold
+      text-transform: uppercase
+      margin: 0 18px
+      transition: all $transitionSpeed $ease
+      &.is-active
+        color: $colorRed
+      &:hover
+        color: $colorRed
+  &__tabs
+    width: 100%
+  &__tab
+    display: none
+    &.is-active
+      display: block
+  &__grid
+    display: flex
+    align-items: flex-start
+    justify-content: center
+    flex-wrap: wrap
+    margin-bottom: 34px
+  &__item
+    width: 30%
+    max-width: 295px
+    margin: 20px 1.5% 15px 
+  &__image
+    width: 100%
+    max-height: 205px
+    overflow: hidden
+    img
+      width: 100%
+      height: auto
+  &__info
+    max-height: 130px
+    height: 100%
+    margin-top: 20px
+  &__title
+    font-family: $extrabold
+    color: #010101
+  &__weight
+    font-family: $regular
+    color: $colorRed
+    line-height: 1.1
+    margin: 6px 0
+  &__about-container
+    height: 70px
+    overflow: hidden
+    margin-bottom: 17px
+  &__about
+    font-family: $regular
+    color: #010101
+    line-height: 1.1
+  &__buttons
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__btn
+    display: inline-block
+    padding: 4px 35px
+    font-family: $regular
+    color: #fff
+    background: $colorRed
+  &__price
+    font-family: $extrabold
+    color: #010101
+    font-size: 18px
+
++r($tablet)
+  .menu-p
+    &__scroll
+      height: 20px
+      overflow: hidden
+      width: calc(100% + 40px)
+      margin: 0 -20px
+      margin-bottom: 10px
+    &__grid
+      justify-content: space-between
+      margin-bottom: 0
+    &__item
+      width: 48%
+      margin: 15px 0
+    &__links
+      margin-top: 0
+      overflow-x: scroll
+      padding-bottom: 30px
+      a
+        margin: 0 8px
+        font-size: 12px
+        &:first-child
+          margin-left: 20px
+        &:last-child
+          margin-right: 20px
+    &__title
+      font-size: 14px
+    &__info
+      margin-top: 10px
+      max-height: 100px
+    &__weight
+      font-size: 12px
+      margin: 10px 0
+    &__about
+      font-size: 12px
+    &__buttons
+      flex-direction: column-reverse
+    &__btn
+      padding: 4px 15px
+      width: 100%
+      text-align: center
+    &__price
+      margin: 5px auto
