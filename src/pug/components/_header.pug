@@ -62,7 +62,7 @@ header.header
     .container(data-aos='fade-up')
       ul
         li
-          a(href="/home.html") Главная
+          a.header__menu-link(href="/home.html") Главная
         li
           select.select-nav(onchange="location = this.options[this.selectedIndex].value;")
             option(value="/home.html") Меню
@@ -70,15 +70,15 @@ header.header
             option(value="/home.html") Меню №2
             option(value="/home.html") Меню №3
         li
-          select.select-nav
+          select.select-nav(onchange="location = this.options[this.selectedIndex].value;")
             option(value="/share.html") Акции
             option(value="/share.html") Акции №1
             option(value="/share.html") Акции №2
             option(value="/share.html") Акции №3
         li
-          a(href="/about.html") О нас
+          a.header__menu-link(href="/about.html") О нас
         li
-          a(href="/callback.html") Обратная связь
+          a.header__menu-link(href="/callback.html") Обратная связь
 
       
 // HEADER :: END

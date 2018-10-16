@@ -72,6 +72,8 @@ $(document).ready(function() {
   function closeMobileMenu() {
     $("[js-hamburger]").removeClass("is-active");
     $(".header__mobile").removeClass("is-active");
+    $(".header__nav").removeClass("is-active");
+    $(".hamburger").removeClass("is-active");
   }
 
   // Prevent # behavior
