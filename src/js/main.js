@@ -74,6 +74,8 @@ $(document).ready(function() {
     $(".header__mobile").removeClass("is-active");
     $(".header__nav").removeClass("is-active");
     $(".hamburger").removeClass("is-active");
+    $("body").removeClass("is-fixed");
+    $("html").removeClass("is-fixed");
   }
 
   // Prevent # behavior
