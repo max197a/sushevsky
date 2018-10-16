@@ -64,7 +64,7 @@ header.header
         li
           a(href="/home.html") Главная
         li
-          select.select-nav(onchange="location = this.value;")
+          select.select-nav(onchange="location = this.options[this.selectedIndex].value;")
             option(value="/home.html") Меню
             option(value="/home.html") Меню №1
             option(value="/home.html") Меню №2

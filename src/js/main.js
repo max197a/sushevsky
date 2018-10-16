@@ -120,6 +120,27 @@ $(document).ready(function() {
     $(this).addClass("is-active");
   });
 
+  _document.on("click", "[js-show-item]", function() {
+    $(this)
+      .parent()
+      .parent()
+      .parent()
+      .parent()
+      .addClass("is-hidden")
+      .slideToggle();
+    $(".menu-p__item-container").slideToggle("medium", function() {
+      if ($(this).is(":visible")) $(this).css("display", "flex");
+    });
+  });
+
+  _document.on("click", "[js-hide-item-container]", function() {
+    $(".menu-p__tab.is-hidden").slideToggle("medium", function() {
+      if ($(this).is(":visible")) $(this).css("display", "flex");
+    });
+    $(".menu-p__tab.is-hidden").removeClass("is-hidden");
+    $(".menu-p__item-container").slideToggle();
+  });
+
   _document.on("click", "[js-popular-tab]", function(e) {
     e.preventDefault();
     var $self = $(this),
@@ -139,6 +160,7 @@ $(document).ready(function() {
       tabIndex = $self.index();
     $self.siblings().removeClass("is-active");
     $self.addClass("is-active");
+    $(".menu-p__item-container").css("display", "none");
     $(".menu-p__tab")
       .removeClass("is-active")
       .css("display", "none")
@@ -192,6 +214,15 @@ $(document).ready(function() {
 
   function initSliders() {
     $("[js-main-slider]").slick({
+      // infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: true
+      // autoplay: true,
+      // autoplaySpeed: 2000
+    });
+    $("[js-main-slider-2]").slick({
       // infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -396,14 +427,14 @@ $(document).ready(function() {
 
       // store overlay globally to access in fadein
       this.$overlay = $(
-        '<div class="js-transition-overlay" style="z-index: 9999;"></div>'
+        '<div class="js-transition-overlay" style="z-index: 9999; background: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center;"><img src="img/logotype.svg" style="width: 80%; max-width: 260px; height: auto;"></div>'
       );
       this.$overlay.insertAfter(".header-container");
       $("body").addClass("is-transitioning");
 
       TweenLite.fromTo(
         this.$overlay,
-        0.6,
+        1,
         {
           x: "0%"
         },
@@ -451,7 +482,7 @@ $(document).ready(function() {
         {
           x: "200%",
           ease: Expo.easeOut,
-          delay: 0.2,
+          delay: 0,
           onComplete: function() {
             _this.$overlay.remove();
             triggerBody();
