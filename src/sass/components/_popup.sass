@@ -1,0 +1,267 @@
+.popup
+  max-width: 1050px
+  padding: 40px
+  background: #fff
+  width: 100%
+  margin: 0 auto
+  position: relative
+  &__grid
+    display: flex
+    align-items: center
+    justify-content: space-between
+    overflow: hidden
+    &--bottom
+      .popup__left
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        .menu-p__item-about
+          width: 58%
+        .menu-p__item-info
+          width: 40%
+          margin-top: 35px
+          max-width: 230px
+          p
+            font-size: 16px
+            padding-top: 2px
+            padding-bottom: 2px
+            line-height: 1.15
+        .menu-p__item-grid--column
+          flex-direction: row
+      .popup__right
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        padding-top: 35px
+        p.price
+          font-size: 36px
+          font-family: $bold
+          line-height: 1.1
+          text-align: center
+          color: $fontColor
+        .btn
+          display: flex
+          align-items: center
+          justify-content: center
+          max-width: 150px
+          width: 100%
+          padding: 8px 15px
+          font-size: 18px
+          margin: 15px 0 0 0
+          font-family: $regular
+          color: #fff
+          background: $colorRed
+          transition: all $transitionSpeed $ease
+          border: 1px solid #fff
+          cursor: pointer
+          &:hover
+            background: #fff
+            color: $colorRed
+  &__left
+    max-width: 700px
+    width: 70%
+    position: relative
+    &:before
+      position: absolute
+      display: block
+      content: ''
+      width: 1px
+      height: 200%
+      background: $colorRed
+      left: 103.5%
+      top: 0
+  &__image
+    width: 100%
+    position: relative
+    max-height: 500px
+    overflow: hidden
+    img
+      width: 100%
+      height: auto
+  &__image-bg
+    position: relative
+    z-index: 1
+  &__image-items
+    position: absolute
+    z-index: 2
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    img
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      height: auto
+      width: 100%
+      opacity: 0
+      transition: all $transitionSpeed $ease
+      pointer-events: none
+      &.show
+        opacity: 1
+        pointer-events: all
+  &__right
+    width: 25%
+    position: relative
+  &__list-image
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    img
+      width: 100%
+      height: auto
+  &__li-image
+    margin: 15px 0
+    height: 100%
+    max-height: 147px
+    overflow: hidden
+    position: relative
+    cursor: pointer
+    &:before
+      display: block
+      content: ''
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      width: 100%
+      height: 100%
+      background: rgba(255,255,255, 0.4)
+      transition: all $transitionSpeed $ease
+      background-image: url(../img/clicker.png)
+      background-position: center center
+      background-size: 18%
+      background-repeat: no-repeat
+      transition: all $transitionSpeed $ease
+      z-index: 2
+      opacity: 0
+    &:after
+      position: absolute
+      z-index: 3
+      display: block
+      content: ''
+      width: calc(100% - 6px)
+      height: calc(100% - 6px)
+      top: 0
+      left: 0
+      border: 3px solid transparent
+      transition: all $transitionSpeed $ease
+    &:hover
+      &:before
+        opacity: 1
+    &.is-active
+      &:after
+        border-color: $colorRed
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
+    img
+      position: relative
+
+.mfp-zoom-in
+  .mfp-with-anim
+    opacity: 0
+    transition: all 0.2s ease-in-out
+    transform: scale(0.8)
+  &.mfp-b
+    opacity: 0
+    transition: all 0.3s ease-out
+  &.mfp-ready
+    .mfp-with-anim
+      opacity: 1
+      transform: scale(1)
+    &.mfp-bg
+      opacity: 0.8
+  &.mfp-removing  
+    .mfp-with-anim
+      transform: scale(0.8) 
+      opacity: 0
+    &.mfp-bg
+      opacity: 0
+
++r($tablet)
+  .popup
+    padding: 30px 20px
+    margin: 5px auto
+    .mfp-close
+      width: 34px
+      top: -5px
+    &__grid
+      flex-wrap: wrap
+      &--bottom
+        .popup__left
+          .menu-p__item-info
+            margin-top: 15px
+            p
+              font-size: 14px
+    &__left
+      width: 100%
+      &:before
+        width: 100%
+        height: 1px
+        left: 0
+        top: auto
+        bottom: -10px
+    &__image
+      max-width: 500px
+      margin: 0 auto
+    &__right
+      width: 100%
+    &__list-image
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      margin-top: 20px
+    &__li-image
+      margin: 0 10px
+      min-height: 100px
+      max-height: 100px
+      width: 32%
+      &:first-child
+        margin-left: 0
+      &:last-child
+        margin-right: 0
+      img
+        height: auto
+        width: 100%
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        min-height: 100px
+        display: block
+
++r($mobile)
+  .popup
+    &__image
+      max-width: 260px
+    &__list-image
+      justify-content: center
+    &__li-image
+      width: 28%
+      margin: 0 10px
+      min-height: 60px
+      max-height: 60px
+    &__grid
+      &--bottom
+        .popup__left
+          flex-wrap: wrap
+          .menu-p__item-about
+            width: 100%
+          .menu-p__item-info
+            width: 100%
+            max-width: 100%
+            position: relative
+            margin-top: 15px
+            &:before
+              position: absolute
+              display: block
+              content: ''
+              width: 100%
+              height: 1px
+              background: $colorRed
+              left: 0
+              top: -10px

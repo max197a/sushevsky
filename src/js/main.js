@@ -27,14 +27,16 @@ $(document).ready(function() {
     initAutogrow();
     initSelectric();
     initValidations();
-    initSliders();
+    // initSliders();
     initFile();
+    initPopup();
 
     // development helper
     _window.on("resize", debounce(setBreakpoint, 200));
   }
 
   // this is a master function which should have all functionality
+  initSliders();
   pageReady();
 
   //////////
@@ -168,6 +170,19 @@ $(document).ready(function() {
       .fadeIn();
   });
 
+  _document.on("click", "[js-show-image]", function(e) {
+    e.preventDefault();
+    var $self = $(this),
+      tabIndex = $self.index();
+    $self.siblings().removeClass("is-active");
+    $self.addClass("is-active");
+    // $(".popup__image-items img").removeClass("show");
+    $(".popup__image-items img")
+      .removeClass("show")
+      .eq(tabIndex)
+      .addClass("show");
+  });
+
   ////////////////////
   // SHOW PASSWORD TOGGLE
   ////////////////////
@@ -206,6 +221,21 @@ $(document).ready(function() {
     setTimeout(function() {
       $("[js-file]").styler();
     }, 100);
+  }
+
+  //////////
+  // POPUPS
+  //////////
+  function initPopup() {
+    $("[js-open-popup]").magnificPopup({
+      removalDelay: 500, //delay removal by X to allow out-animation
+      callbacks: {
+        beforeOpen: function() {
+          this.st.mainClass = this.st.el.attr("data-effect");
+        }
+      },
+      midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+    });
   }
 
   //////////

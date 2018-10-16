@@ -1,0 +1,48 @@
+// BEGIN SECTION :: popup
+
+section
+  #test-popup.popup.mfp-with-anim.mfp-hide
+    .popup__grid
+      .popup__left
+        .popup__image
+          .popup__image-bg
+            img(src="img/overlay.png", alt="")
+          .popup__image-items
+            img.show(src="img/popular-1.jpg", alt="")
+            img(src="img/sushi-1.jpg", alt="")
+            img(src="img/sushi-2.jpg", alt="")
+      .popup__right
+        .popup__list-image
+          a.popup__li-image.is-active(href="#" js-show-image)
+            img(src="img/popular-1.jpg", alt="")
+          a.popup__li-image(href="#" js-show-image)
+            img(src="img/sushi-1.jpg", alt="")
+          a.popup__li-image(href="#" js-show-image)
+            img(src="img/sushi-2.jpg", alt="")
+    .popup__grid.popup__grid--bottom
+      .popup__left
+        .menu-p__item-about
+          p.menu-p__item-title СУПЕР ПУПЕР НАЗВАНИЕ
+          p.menu-p__item-desc Описание блюда, описание блюда, описание блюда и т.д.
+          p.menu-p__item-weight 300 гр.
+        .menu-p__item-info
+          .menu-p__item-grid.menu-p__item-grid--column
+            p Пищевая ценность
+            p в 100 г
+          .menu-p__item-grid
+            p Белки
+            p 7.2 г
+          .menu-p__item-grid
+            p Жиры
+            p 12.8 г
+          .menu-p__item-grid
+            p Углеводы
+            p 15.2 г
+          .menu-p__item-grid
+            p Калории
+            p 205 kcal
+      .popup__right
+        p.price 300 руб.
+        a.btn(href="#") Добавить
+
+// END SECTION :: popup
