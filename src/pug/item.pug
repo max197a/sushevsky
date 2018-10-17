@@ -1,0 +1,57 @@
+---
+title: Sushevsky Item
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: item-page
+
+  section
+    .menu-p
+      .container
+        .title-container
+          h2 Меню
+        .menu-p__scroll
+          .menu-p__links
+            a(href="/menu-sushy.html") СУШИ
+            a(href="/menu-rolly.html") РОЛЛЫ
+            a(href="/menu-sety.html") СЕТЫ
+            a(href="/menu-pizza.html") ПИЦЦА
+            a(href="/menu-lapsha.html") ЛАПША
+            a(href="/menu-zakuski.html") ЗАКУСКИ
+            a(href="/menu-salaty.html") САЛАТЫ
+            a(href="/menu-napitki.html") НАПИТКИ
+        .menu-p__tabs
+          .menu-p__item-container
+            //- a.hide(href="#" js-hide-item-container) Скрыть
+            .menu-p__item-left
+              .menu-p__item-image
+                img(src="img/popular-1.jpg", alt="")
+                a(href="#test-popup" data-effect="mfp-zoom-in" js-open-popup)
+              .menu-p__item-about
+                p.menu-p__item-title СУПЕР ПУПЕР НАЗВАНИЕ
+                p.menu-p__item-desc Описание блюда, описание блюда, описание блюда и т.д.
+                p.menu-p__item-weight 300 гр.
+            .menu-p__item-right
+              .menu-p__item-info
+                .menu-p__item-grid.menu-p__item-grid--column
+                  p Пищевая ценность
+                  p в 100 г
+                .line
+                .menu-p__item-grid
+                  p Белки
+                  p 7.2 г
+                .menu-p__item-grid
+                  p Жиры
+                  p 12.8 г
+                .menu-p__item-grid
+                  p Углеводы
+                  p 15.2 г
+                .menu-p__item-grid
+                  p Калории
+                  p 205 kcal
+                p Вес 25 г
+                .line
+                p.price 300 руб.
+              a.btn(href="#") Добавить
+  // END SECTION :: item-page

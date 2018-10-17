@@ -13,7 +13,21 @@ PageList:
   ready: 20
 - file: cabinet.html
   ready: 20
-- file: menu.html
+- file: menu-sushy.html
+  ready: 20
+- file: menu-rolly.html
+  ready: 20
+- file: menu-sety.html
+  ready: 20
+- file: menu-pizza.html
+  ready: 20
+- file: menu-lapsha.html
+  ready: 20
+- file: menu-zakuski.html
+  ready: 20
+- file: menu-salaty.html
+  ready: 20
+- file: menu-napitki.html
   ready: 20
 - file: share.html
   ready: 20
