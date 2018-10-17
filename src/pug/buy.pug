@@ -11,7 +11,7 @@ block content
       h2 Корзина
     .buy
       .container
-        form(action="#")
+        form.js-validation-form(action="#")
           .buy__grid
             .buy__left
               p Мой заказ:
@@ -45,58 +45,58 @@ block content
                 p Способ оплаты:
                 .input-container
                   label.checkbox
-                    input(type='checkbox' required)
+                    input(type='checkbox' title="by cash" name="cash")
                     .checkbox__text Наличными курьеру
                 .input-container
                   label.checkbox
-                    input(type='checkbox' required)
+                    input(type='checkbox' title="by card" name="card")
                     .checkbox__text Банковской картой на сайте
               .buy__left-container
                 .input-container
                   label.checkbox
-                    input(type='checkbox' required)
+                    input(type='checkbox' title="Please agree to our policy!" name="agree")
                     .checkbox__text Я согласен с условиями использования персональных данных*
                 .input-container
                   label.checkbox
-                    input(type='checkbox' required)
+                    input(type='checkbox' title="Please agree to our delivery policy!" name="agreedelivery")
                     .checkbox__text Я согласен с условиями доставки*
             .buy__right
               .input-container
                 label(for="f1") ФИО*
-                input#f1(type="text" required)
+                input#f1(type="text" name="name")
               .input-container
                 label(for="f2") Телефон*
-                input#f2(type="text" required)
+                input#f2(type="text" name="phone")
               .input-container
                 label(for="f3") E-mail*
-                input#f3(type="text" required)
+                input#f3(type="text" name="mail")
               .input-container.input-container--select
                 label(for="f4") Адрес доставки*
-                  select.-callback#f4
+                  select.-callback#f4(name="selectpoint")
                     option(value="val1-1") Выберите адрес #1
                     option(value="val1-2") Выберите адрес #2
                     option(value="val1-3") Выберите адрес #3
               .buy__grid
                 .input-container.buy__input-item
                   label(for="f5") Город*
-                  input#f5(type="text" required)
+                  input#f5(type="text" name="city")
                 .input-container.buy__input-item
                   label(for="f6") Улица*
-                  input#f6(type="text" required)
+                  input#f6(type="text" name="street")
               .buy__grid
                 .input-container.buy__input-item
                   label(for="f7") Дом*
-                  input#f7(type="text" required)
+                  input#f7(type="text" name="building")
                 .input-container.buy__input-item
                   label(for="f8") Корпус*
-                  input#f8(type="text" required)
+                  input#f8(type="text" name="corp")
               .buy__grid
                 .input-container.buy__input-item
                   label(for="f9") Подьезд*
-                  input#f9(type="text" required)
+                  input#f9(type="text" name="entrance")
                 .input-container.buy__input-item
                   label(for="f10") Квартира*
-                  input#f10(type="text" required)
+                  input#f10(type="text" name="flat")
               .input-container
                 label(for="f11") Комментарий
                 input#f11(type="text")
@@ -104,25 +104,25 @@ block content
                 p Способ оплаты:
                 .input-container
                   label.checkbox
-                    input(type='checkbox' required)
+                    input(type='checkbox' title="by cash" name="cash1")
                     .checkbox__text Наличными курьеру
                 .input-container
                   label.checkbox
-                    input(type='checkbox' required)
+                    input(type='checkbox' title="by card" name="card1")
                     .checkbox__text Банковской картой на сайте
               .buy__left-container
                 .input-container
                   label.checkbox
-                    input(type='checkbox' required)
+                    input(type='checkbox' title="Please agree to our policy!" name="agree1")
                     .checkbox__text Я согласен с условиями использования персональных данных*
                 .input-container
                   label.checkbox
-                    input(type='checkbox' required)
+                    input(type='checkbox' title="Please agree to our delivery policy!" name="agreedelivery1")
                     .checkbox__text Я согласен с условиями доставки*
           .buy__buttons
             .buy__captcha
               .input-container
-                input(type="text" placeholder="Введите символы")
+                input(type="text" name="captcha" placeholder="Введите символы")
               .buy__captcha-image
                 img(src="img/captcha.jpg", alt="")
             .input-container.input-container--submit-buy

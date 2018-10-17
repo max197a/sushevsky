@@ -12,28 +12,28 @@ block content
         h2 Обратная связь
     .callback
       .container
-        form(action="#")
+        form.js-validation-form(action="#")
           p Нам очень важны отзывы о нашей работе, поэтому просим уделить минуту времени и высказать Ваше мнение о нас!
           p Отзыв о качестве обслуживания Вы можете направить нам с помощью приведенной ниже формы.
           .callback__grid
             .callback__left
               .input-container
                 label(for="f1") ФИО*
-                input#f1(type="text" required)
+                input#f1(type="text" name="name")
               .input-container
                 label(for="f2") Телефон*
-                input#f2(type="text" required)
+                input#f2(type="text" name="phone")
               .input-container
                 label(for="f3") E-mail*
-                input#f3(type="text" required)
+                input#f3(type="text" name="mail")
               .input-container
                 label.checkbox
-                  input(type='checkbox' required)
+                  input(type='checkbox' title="Please agree to our policy!" name="agree")
                   .checkbox__text Я согласен с условиями использования персональных данных*
             .callback__right
               .input-container
                 label(for="f4") Тема сообщения*
-                select.-callback#f4
+                select.-callback#f4(name="selectpoint")
                   option(value="val1") Доставка №1
                   option(value="val1") Доставка №2
                   option(value="val1") Доставка №3

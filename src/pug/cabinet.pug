@@ -12,25 +12,25 @@ block content
         h2 Личный кабинет
     .cabinet
       .container
-        form(action="#")
+        form.js-validation-form(action="#")
           p Личная информация
           .cabinet__grid
             .cabinet__left
               .input-container
                 label(for="f1") ФИО*
-                input#f1(type="text" required)
+                input#f1(type="text" name="name")
               .input-container
                 label(for="f2") Телефон*
-                input#f2(type="text" required)
+                input#f2(type="text" name="phone")
               .input-container
                 label(for="f3") E-mail*
-                input#f3(type="text" required)
+                input#f3(type="text" name="mail")
               .input-container
                 label(for="f4") Адрес доставки*
-                input#f4(type="text" required)
+                input#f4(type="text" name="point")
               .input-container
                 label.checkbox
-                  input(type='checkbox' required)
+                  input(type='checkbox' title="Please agree to our policy!" name="agree")
                   .checkbox__text Я согласен с условиями использования персональных данных*
             .cabinet__right
               .cabinet__socials

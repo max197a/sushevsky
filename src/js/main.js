@@ -362,42 +362,76 @@ $(document).ready(function() {
     /////////////////////
     // REGISTRATION FORM
     ////////////////////
-    $(".js-registration-form").validate({
+    $(".js-validation-form").validate({
       errorPlacement: validateErrorPlacement,
       highlight: validateHighlight,
       unhighlight: validateUnhighlight,
       submitHandler: validateSubmitHandler,
       rules: {
-        // first_name: "required",
-        // phone: "required",
-        email: {
+        name: "required",
+        phone: "required",
+        mail: "required",
+        captcha: "required",
+        check: "required",
+        agree: "required",
+        point: "required",
+        selectpoint: "required",
+        number: "required",
+        month: {
           required: true,
-          email: true
+          minlength: 2,
+          maxlength: 2
         },
-        password: {
-          required: true
-          // minlength: 6
-        }
-        // phone: validatePhone
-      }
-    });
-    $(".js-form").validate({
-      errorPlacement: validateErrorPlacement,
-      highlight: validateHighlight,
-      unhighlight: validateUnhighlight,
-      submitHandler: validateSubmitHandler,
-      rules: {
-        first_name: "required",
-        // phone: "required",
-        email: {
+        year: {
           required: true,
-          email: true
+          minlength: 2,
+          maxlength: 2
         },
-        password: {
+        cvv: {
           required: true,
-          minlength: 6
-        }
-        // phone: validatePhone
+          minlength: 3,
+          maxlength: 3
+        },
+        cash: "required",
+        card: "required",
+        agreedelivery: "required",
+        city: "required",
+        street: "required",
+        building: "required",
+        corp: "required",
+        entrance: "required",
+        flat: "required",
+        cash1: "required",
+        card1: "required",
+        agreedelivery1: "required",
+        agree1: "required"
+      },
+      messages: {
+        name: "Заполните это поле",
+        phone: "Заполните это поле",
+        mail: "Заполните это поле",
+        captcha: "Заполните это поле",
+        check: "Заполните это поле",
+        agree: "Заполните это поле",
+        point: "Заполните это поле",
+        selectpoint: "Заполните это поле",
+        number: "Заполните это поле",
+        month: "Заполните это поле",
+        year: "Заполните это поле",
+        cvv: "Заполните это поле",
+        cash: "Заполните это поле",
+        card: "Заполните это поле",
+        agreedelivery: "Заполните это поле",
+        city: "Заполните это поле",
+        street: "Заполните это поле",
+        building: "Заполните это поле",
+        corp: "Заполните это поле",
+        entrance: "Заполните это поле",
+        flat: "Заполните это поле",
+        cash1: "Заполните это поле",
+        card1: "Заполните это поле",
+        agreedelivery1: "Заполните это поле",
+        agree1: "Заполните это поле"
       }
     });
   }

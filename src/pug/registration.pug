@@ -12,25 +12,25 @@ block content
         h2 Регистрация
     .registration
       .container
-        form(action="#")
+        form.js-validation-form(action="#")
           .registration__grid
             .registration__left
               .input-container
                 label(for="f1") ФИО*
-                input#f1(type="text" required)
+                input#f1(type="text" name="name")
               .input-container
                 label(for="f2") Телефон*
-                input#f2(type="text" required)
+                input#f2(type="text" name="phone")
               .input-container
                 label(for="f3") E-mail*
-                input#f3(type="text" required)
+                input#f3(type="text" name="mail")
               .input-container
                 label.checkbox
-                  input(type='checkbox' required)
+                  input(type='checkbox' title="Please agree to our policy!" name="agree")
                   .checkbox__text Я согласен с условиями использования персональных данных*
               .registration__captcha
                 .input-container
-                  input(type="text" placeholder="Введите символы")
+                  input(type="text" name="captcha" placeholder="Введите символы")
                 .registration__captcha-image
                   img(src="img/captcha.jpg", alt="")
             .registration__right

@@ -11,65 +11,66 @@ block content
       h2 Оплата
     .pay
       .container
-        .pay__grid
-          .pay__left
-            p Вы оплачиваете:
-            table
-              tr
-                td Блюдо 1
-                td 1
-                td 170 руб.
-              tr
-                td Блюдо 2
-                td 2
-                td 230 руб.
-              tr
-                td Напиток 1
-                td 1
-                td 70 руб.
-              tr
-                td Соус 1
-                td 3
-                td 0 руб.
-              tr
-                td Хлеб
-                td 1
-                td 50 руб.
-              tr.weight-row.margin-row
-                td Сумма заказа
-                td 
-                td 520 руб.
-              tr.weight-row
-                td Номер заказа
-                td 
-                td 0312312
-          .pay__right
-            .pay__card
-              .input-container
-                input(type="text" placeholder="Номер карты")
-              .input-container
-                input(type="text" placeholder="Имя держателя карты")
-              .pay__card-grid
-                .input-container.sm
-                  label(for="p1") VALID THRU
-                  input#p1(type="text" placeholder="MM")
-                .input-container.sm
-                  p /
-                .input-container.sm
-                  input(type="text" placeholder="ГГ")
-            .pay__card
-              .input-container.sm.cvv
-                label(for="p2") VC2\CVV2
-                input#p2(type="text" placeholder="XXX")
-        .cabinet__grid.cabinet__grid--buttons
-          .cabinet__left
-            
-          .cabinet__right
-            .cabinet__right--grid
-              .input-container
-                button.btn.btn--cancel Отменить оплату
-              .input-container
-                input.btn(type="submit" value="Оплатить")
-      
+        form.js-validation-form(action="")
+          .pay__grid
+            .pay__left
+              p Вы оплачиваете:
+              table
+                tr
+                  td Блюдо 1
+                  td 1
+                  td 170 руб.
+                tr
+                  td Блюдо 2
+                  td 2
+                  td 230 руб.
+                tr
+                  td Напиток 1
+                  td 1
+                  td 70 руб.
+                tr
+                  td Соус 1
+                  td 3
+                  td 0 руб.
+                tr
+                  td Хлеб
+                  td 1
+                  td 50 руб.
+                tr.weight-row.margin-row
+                  td Сумма заказа
+                  td 
+                  td 520 руб.
+                tr.weight-row
+                  td Номер заказа
+                  td 
+                  td 0312312
+            .pay__right
+              .pay__card
+                .input-container
+                  input(type="text" name="number" placeholder="Номер карты")
+                .input-container
+                  input(type="text" name="name" placeholder="Имя держателя карты")
+                .pay__card-grid
+                  .input-container.sm
+                    label(for="p1") VALID THRU
+                    input#p1(type="number" name="month" placeholder="MM" max="12")
+                  .input-container.sm
+                    p /
+                  .input-container.sm
+                    input(type="number" name="year" placeholder="ГГ" max="30")
+              .pay__card
+                .input-container.sm.cvv
+                  label(for="p2") VC2\CVV2
+                  input#p2(type="number" name="cvv" placeholder="XXX" max="999")
+          .cabinet__grid.cabinet__grid--buttons
+            .cabinet__left
+              
+            .cabinet__right
+              .cabinet__right--grid
+                .input-container
+                  button.btn.btn--cancel Отменить оплату
+                .input-container
+                  input.btn(type="submit" value="Оплатить")
+        
   
   // END SECTION :: pay
