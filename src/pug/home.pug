@@ -4,6 +4,23 @@ title: Sushevsky
 extends shared/_layout
 block content
 
+  // BEGIN SECTION :: slider
+
+  section(data-aos='fade-up')
+    .main-slider
+      .container
+        .slider(js-main-slider)
+          .item
+            img(src="img/slide-1.jpg", alt="")
+          .item
+            img(src="img/slide-1.jpg", alt="")
+          .item
+            img(src="img/slide-1.jpg", alt="")
+          .item
+            img(src="img/slide-1.jpg", alt="")
+
+  // END SECTION :: slider
+
   // BEGIN SECTION :: menu
 
   section
@@ -12,43 +29,35 @@ block content
         .title-container
           h2 Меню
         .menu__grid
-          .menu__item
-            a(href="/menu-sushy.html")
+          a.menu__item(href="/menu-sushy.html")
             p.menu__title Суши
             .menu__image
               img(src="img/menu-1.jpg", alt="")
-          .menu__item
-            a(href="/menu-rolly.html")
+          a.menu__item(href="/menu-rolly.html")
             p.menu__title Роллы
             .menu__image
               img(src="img/menu-2.jpg", alt="")
-          .menu__item
-            a(href="/menu-sety.html")
+          a.menu__item(href="/menu-sety.html")
             p.menu__title Сеты
             .menu__image
               img(src="img/menu-3.jpg", alt="")
-          .menu__item
-            a(href="/menu-pizza.html")
+          a.menu__item(href="/menu-pizza.html")
             p.menu__title Пицца
             .menu__image
               img(src="img/menu-4.jpg", alt="")
-          .menu__item
-            a(href="/menu-lapsha.html")
+          a.menu__item(href="/menu-lapsha.html")
             p.menu__title Лапша
             .menu__image
               img(src="img/menu-5.jpg", alt="")
-          .menu__item
-            a(href="/menu-salaty.html")
+          a.menu__item(href="/menu-salaty.html")
             p.menu__title Салаты
             .menu__image
               img(src="img/menu-6.jpg", alt="")
-          .menu__item
-            a(href="/menu-zakuski.html")
+          a.menu__item(href="/menu-zakuski.html")
             p.menu__title Закуски
             .menu__image
               img(src="img/menu-7.jpg", alt="")
-          .menu__item
-            a(href="/menu-napitki.html")
+          a.menu__item(href="/menu-napitki.html")
             p.menu__title Напитки
             .menu__image
               img(src="img/menu-8.jpg", alt="")

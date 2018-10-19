@@ -4,6 +4,23 @@ title: Sushevsky Delivery
 extends shared/_layout
 block content
 
+  // BEGIN SECTION :: slider
+
+  section(data-aos='fade-up')
+    .main-slider
+      .container
+        .slider(js-main-slider)
+          .item
+            img(src="img/slide-1.jpg", alt="")
+          .item
+            img(src="img/slide-1.jpg", alt="")
+          .item
+            img(src="img/slide-1.jpg", alt="")
+          .item
+            img(src="img/slide-1.jpg", alt="")
+
+  // END SECTION :: slider
+
   // BEGIN SECTION :: delivery
 
   section
@@ -34,7 +51,7 @@ block content
         .delivery__map
           p.delivery__map-title КАРТА ДОСТАВКИ
           .delivery__map-container
-            iframe(src='https://yandex.ua/map-widget/v1/?um=constructor%3Af1c0ad0c8bfe0ae94b6153b16a1d037a0686b6eae456b6a8b2a8caa97b8a7e3e&source=constructor', width='100%', height='100%', frameborder='0')
+            iframe(src='https://yandex.ua/map-widget/v1/?um=constructor%3Af1c0ad0c8bfe0ae94b6153b16a1d037a0686b6eae456b6a8b2a8caa97b8a7e3e&source=constructor', width='100%', height='400', frameborder='0')
       .container
         .ways
           .title-container

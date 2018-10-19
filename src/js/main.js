@@ -252,9 +252,9 @@ $(document).ready(function() {
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
-      dots: true
-      // autoplay: true,
-      // autoplaySpeed: 2000
+      dots: true,
+      autoplay: true,
+      autoplaySpeed: 5000
     });
     $("[js-main-slider-2]").slick({
       // infinite: true,
@@ -344,17 +344,19 @@ $(document).ready(function() {
 
     var validatePhone = {
       required: true,
+      minlength: 11,
+      digits: true,
       normalizer: function(value) {
-        var PHONE_MASK = "(XXX) XXX-XXXX";
+        var PHONE_MASK = "+7 (XXX) XXX-XXXX";
         if (!value || value === PHONE_MASK) {
           return value;
         } else {
           return value.replace(/[^\d]/g, "");
         }
-      },
-      minlength: 11,
-      digits: true
+      }
     };
+
+    jQuery.validator.messages.required = "";
 
     ////////
     // FORMS
@@ -369,8 +371,11 @@ $(document).ready(function() {
       submitHandler: validateSubmitHandler,
       rules: {
         name: "required",
-        phone: "required",
-        mail: "required",
+        phone: validatePhone,
+        mail: {
+          required: true,
+          email: true
+        },
         captcha: "required",
         check: "required",
         agree: "required",
@@ -408,8 +413,14 @@ $(document).ready(function() {
       },
       messages: {
         name: "Заполните это поле",
-        phone: "Заполните это поле",
-        mail: "Заполните это поле",
+        phone: {
+          required: "Заполните это поле",
+          minlength: "Введите корректный телефон"
+        },
+        mail: {
+          required: "Заполните это поле",
+          email: "E-mail содержит неправильный формат"
+        },
         captcha: "Заполните это поле",
         check: "Заполните это поле",
         agree: "Заполните это поле",
@@ -419,8 +430,8 @@ $(document).ready(function() {
         month: "Заполните это поле",
         year: "Заполните это поле",
         cvv: "Заполните это поле",
-        cash: "Заполните это поле",
-        card: "Заполните это поле",
+        cash: "Выберите нужный вариант оплаты",
+        card: "Выберите нужный вариант оплаты",
         agreedelivery: "Заполните это поле",
         city: "Заполните это поле",
         street: "Заполните это поле",
@@ -428,11 +439,15 @@ $(document).ready(function() {
         corp: "Заполните это поле",
         entrance: "Заполните это поле",
         flat: "Заполните это поле",
-        cash1: "Заполните это поле",
-        card1: "Заполните это поле",
+        cash1: "Выберите нужный вариант оплаты",
+        card1: "Выберите нужный вариант оплаты",
         agreedelivery1: "Заполните это поле",
         agree1: "Заполните это поле"
       }
+    });
+
+    $.validator.setDefaults({
+      ignore: [] // DON'T IGNORE PLUGIN HIDDEN SELECTS, CHECKBOXES AND RADIOS!!!
     });
   }
 

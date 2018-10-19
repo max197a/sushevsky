@@ -38,8 +38,9 @@
     margin-top: 50px
     transition: all $transitionSpeed $ease
     &:hover
-      background: #fff
-      color: $colorRed
+      background: $hoverColor
+    &:active
+      background: $activeColor
   &--page
     padding-top: 0
     .container
@@ -84,6 +85,8 @@
       .about__grid
         flex-wrap: wrap
         margin-bottom: 20px
+        max-width: 400px
+        margin: 0 auto 20px
         &--reverse
           flex-direction: row
       .about__image

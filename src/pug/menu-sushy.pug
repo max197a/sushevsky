@@ -4,6 +4,23 @@ title: Sushevsky Суши
 extends shared/_layout
 block content
 
+  // BEGIN SECTION :: slider
+
+  section(data-aos='fade-up')
+    .main-slider
+      .container
+        .slider(js-main-slider)
+          .item
+            img(src="img/slide-1.jpg", alt="")
+          .item
+            img(src="img/slide-1.jpg", alt="")
+          .item
+            img(src="img/slide-1.jpg", alt="")
+          .item
+            img(src="img/slide-1.jpg", alt="")
+
+  // END SECTION :: slider
+
   // BEGIN SECTION :: menu-p
 
   section
@@ -25,11 +42,10 @@ block content
           .menu-p__tab
             .menu-p__grid
               .menu-p__item
-                .menu-p__image
+                a.menu-p__image(href="/item.html")
                   img(src="img/popular-1.jpg", alt="")
-                  a(href="/item.html")
                 .menu-p__info
-                  p.menu-p__title СУШИ1 Супер пупер суши Игинаши
+                  a.menu-p__title(href="/item.html") СУШИ1 Супер пупер суши Игинаши
                   p.menu-p__weight 300гр.
                   .menu-p__about-container
                     p.menu-p__about Описание блюда, описание блюда, описание блюда и т.д.
@@ -37,11 +53,10 @@ block content
                   a.menu-p__btn(href="#") Добавить
                   p.menu-p__price 300 руб.
               .menu-p__item
-                .menu-p__image
+                a.menu-p__image(href="/item.html")
                   img(src="img/popular-1.jpg", alt="")
-                  a(href="/item.html")
                 .menu-p__info
-                  p.menu-p__title Супер пупер суши Игинаши
+                  a.menu-p__title(href="/item.html") Супер пупер суши Игинаши
                   p.menu-p__weight 300гр.
                   .menu-p__about-container
                     p.menu-p__about Описание блюда, описание блюда, описание блюда и т.д.
@@ -49,11 +64,10 @@ block content
                   a.menu-p__btn(href="#") Добавить
                   p.menu-p__price 300 руб.
               .menu-p__item
-                .menu-p__image
+                a.menu-p__image(href="/item.html")
                   img(src="img/popular-1.jpg", alt="")
-                  a(href="/item.html")
                 .menu-p__info
-                  p.menu-p__title Супер пупер суши Игинаши
+                  a.menu-p__title(href="/item.html") Супер пупер суши Игинаши
                   p.menu-p__weight 300гр.
                   .menu-p__about-container
                     p.menu-p__about Описание блюда, описание блюда, описание блюда и т.д.
@@ -61,11 +75,10 @@ block content
                   a.menu-p__btn(href="#") Добавить
                   p.menu-p__price 300 руб.
               .menu-p__item
-                .menu-p__image
+                a.menu-p__image(href="/item.html")
                   img(src="img/popular-1.jpg", alt="")
-                  a(href="/item.html")
                 .menu-p__info
-                  p.menu-p__title Супер пупер суши Игинаши
+                  a.menu-p__title(href="/item.html") Супер пупер суши Игинаши
                   p.menu-p__weight 300гр.
                   .menu-p__about-container
                     p.menu-p__about Описание блюда, описание блюда, описание блюда и т.д.
@@ -73,11 +86,10 @@ block content
                   a.menu-p__btn(href="#") Добавить
                   p.menu-p__price 300 руб.
               .menu-p__item
-                .menu-p__image
+                a.menu-p__image(href="/item.html")
                   img(src="img/popular-1.jpg", alt="")
-                  a(href="/item.html")
                 .menu-p__info
-                  p.menu-p__title Супер пупер суши Игинаши
+                  a.menu-p__title(href="/item.html") Супер пупер суши Игинаши
                   p.menu-p__weight 300гр.
                   .menu-p__about-container
                     p.menu-p__about Описание блюда, описание блюда, описание блюда и т.д.
@@ -85,11 +97,10 @@ block content
                   a.menu-p__btn(href="#") Добавить
                   p.menu-p__price 300 руб.
               .menu-p__item
-                .menu-p__image
+                a.menu-p__image(href="/item.html")
                   img(src="img/popular-1.jpg", alt="")
-                  a(href="/item.html")
                 .menu-p__info
-                  p.menu-p__title Супер пупер суши Игинаши
+                  a.menu-p__title(href="/item.html") Супер пупер суши Игинаши
                   p.menu-p__weight 300гр.
                   .menu-p__about-container
                     p.menu-p__about Описание блюда, описание блюда, описание блюда и т.д.
@@ -97,11 +108,10 @@ block content
                   a.menu-p__btn(href="#") Добавить
                   p.menu-p__price 300 руб.
               .menu-p__item
-                .menu-p__image
+                a.menu-p__image(href="/item.html")
                   img(src="img/popular-1.jpg", alt="")
-                  a(href="/item.html")
                 .menu-p__info
-                  p.menu-p__title СУШИ Супер пупер суши Игинаши
+                  a.menu-p__title(href="/item.html") СУШИ Супер пупер суши Игинаши
                   p.menu-p__weight 300гр.
                   .menu-p__about-container
                     p.menu-p__about Описание блюда, описание блюда, описание блюда и т.д.
@@ -109,11 +119,10 @@ block content
                   a.menu-p__btn(href="#") Добавить
                   p.menu-p__price 300 руб.
               .menu-p__item
-                .menu-p__image
+                a.menu-p__image(href="/item.html")
                   img(src="img/popular-1.jpg", alt="")
-                  a(href="/item.html")
                 .menu-p__info
-                  p.menu-p__title Супер пупер суши Игинаши
+                  a.menu-p__title(href="/item.html") Супер пупер суши Игинаши
                   p.menu-p__weight 300гр.
                   .menu-p__about-container
                     p.menu-p__about Описание блюда, описание блюда, описание блюда и т.д.
@@ -121,11 +130,10 @@ block content
                   a.menu-p__btn(href="#") Добавить
                   p.menu-p__price 300 руб.
               .menu-p__item
-                .menu-p__image
+                a.menu-p__image(href="/item.html")
                   img(src="img/popular-1.jpg", alt="")
-                  a(href="/item.html")
                 .menu-p__info
-                  p.menu-p__title Супер пупер суши Игинаши
+                  a.menu-p__title(href="/item.html") Супер пупер суши Игинаши
                   p.menu-p__weight 300гр.
                   .menu-p__about-container
                     p.menu-p__about Описание блюда, описание блюда, описание блюда и т.д.
@@ -133,11 +141,10 @@ block content
                   a.menu-p__btn(href="#") Добавить
                   p.menu-p__price 300 руб.
               .menu-p__item
-                .menu-p__image
+                a.menu-p__image(href="/item.html")
                   img(src="img/popular-1.jpg", alt="")
-                  a(href="/item.html")
                 .menu-p__info
-                  p.menu-p__title Супер пупер суши Игинаши
+                  a.menu-p__title(href="/item.html") Супер пупер суши Игинаши
                   p.menu-p__weight 300гр.
                   .menu-p__about-container
                     p.menu-p__about Описание блюда, описание блюда, описание блюда и т.д.
@@ -145,11 +152,10 @@ block content
                   a.menu-p__btn(href="#") Добавить
                   p.menu-p__price 300 руб.
               .menu-p__item
-                .menu-p__image
+                a.menu-p__image(href="/item.html")
                   img(src="img/popular-1.jpg", alt="")
-                  a(href="/item.html")
                 .menu-p__info
-                  p.menu-p__title Супер пупер суши Игинаши
+                  a.menu-p__title(href="/item.html") Супер пупер суши Игинаши
                   p.menu-p__weight 300гр.
                   .menu-p__about-container
                     p.menu-p__about Описание блюда, описание блюда, описание блюда и т.д.
@@ -157,11 +163,10 @@ block content
                   a.menu-p__btn(href="#") Добавить
                   p.menu-p__price 300 руб.
               .menu-p__item
-                .menu-p__image
+                a.menu-p__image(href="/item.html")
                   img(src="img/popular-1.jpg", alt="")
-                  a(href="/item.html")
                 .menu-p__info
-                  p.menu-p__title Супер пупер суши Игинаши
+                  a.menu-p__title(href="/item.html") Супер пупер суши Игинаши
                   p.menu-p__weight 300гр.
                   .menu-p__about-container
                     p.menu-p__about Описание блюда, описание блюда, описание блюда и т.д.

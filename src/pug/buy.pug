@@ -4,6 +4,23 @@ title: Sushevsky buy
 extends shared/_layout
 block content
 
+  // BEGIN SECTION :: slider
+
+  section(data-aos='fade-up')
+    .main-slider
+      .container
+        .slider(js-main-slider)
+          .item
+            img(src="img/slide-1.jpg", alt="")
+          .item
+            img(src="img/slide-1.jpg", alt="")
+          .item
+            img(src="img/slide-1.jpg", alt="")
+          .item
+            img(src="img/slide-1.jpg", alt="")
+
+  // END SECTION :: slider
+  
   // BEGIN SECTION :: buy
 
   section
@@ -43,23 +60,19 @@ block content
                   td 520 руб.
               .buy__left-container
                 p Способ оплаты:
-                .input-container
-                  label.checkbox
-                    input(type='checkbox' title="by cash" name="cash")
-                    .checkbox__text Наличными курьеру
-                .input-container
-                  label.checkbox
-                    input(type='checkbox' title="by card" name="card")
-                    .checkbox__text Банковской картой на сайте
+                .input-container.input-container--checkbox
+                  input#r1(type='radio'  title="by cash" name="cash")
+                  label(for="r1").checkbox__text Наличными курьеру
+                .input-container.input-container--checkbox
+                  input#r2(type='radio' title="by card" name="cash")
+                  label(for="r2").checkbox__text Банковской картой на сайте
               .buy__left-container
-                .input-container
-                  label.checkbox
-                    input(type='checkbox' title="Please agree to our policy!" name="agree")
-                    .checkbox__text Я согласен с условиями использования персональных данных*
-                .input-container
-                  label.checkbox
-                    input(type='checkbox' title="Please agree to our delivery policy!" name="agreedelivery")
-                    .checkbox__text Я согласен с условиями доставки*
+                .input-container.input-container--checkbox
+                  input#f3-c(type='checkbox' title="Please agree to our policy!" name="agree")
+                  label(for="f3-c").checkbox__text Я согласен с условиями использования персональных данных*
+                .input-container.input-container--checkbox
+                  input#f3-c2(type='checkbox' title="Please agree to our delivery policy!" name="agreedelivery")
+                  label(for="f3-c2").checkbox__text Я согласен с условиями доставки*
             .buy__right
               .input-container
                 label(for="f1") ФИО*
@@ -102,23 +115,19 @@ block content
                 input#f11(type="text")
               .buy__left-container
                 p Способ оплаты:
-                .input-container
-                  label.checkbox
-                    input(type='checkbox' title="by cash" name="cash1")
-                    .checkbox__text Наличными курьеру
-                .input-container
-                  label.checkbox
-                    input(type='checkbox' title="by card" name="card1")
-                    .checkbox__text Банковской картой на сайте
+                .input-container.input-container--checkbox
+                  input#r1-1(type='radio'  title="by cash" name="cash1")
+                  label(for="r1-1").checkbox__text Наличными курьеру
+                .input-container.input-container--checkbox
+                  input#r2-1(type='radio' title="by card" name="cash1")
+                  label(for="r2-1").checkbox__text Банковской картой на сайте
               .buy__left-container
-                .input-container
-                  label.checkbox
-                    input(type='checkbox' title="Please agree to our policy!" name="agree1")
-                    .checkbox__text Я согласен с условиями использования персональных данных*
-                .input-container
-                  label.checkbox
-                    input(type='checkbox' title="Please agree to our delivery policy!" name="agreedelivery1")
-                    .checkbox__text Я согласен с условиями доставки*
+                .input-container.input-container--checkbox
+                  input#f3-c1(type='checkbox' title="Please agree to our policy!" name="agree1")
+                  label(for="f3-c1").checkbox__text Я согласен с условиями использования персональных данных*
+                .input-container.input-container--checkbox
+                  input#f3-c22(type='checkbox' title="Please agree to our delivery policy!" name="agreedelivery1")
+                  label(for="f3-c22").checkbox__text Я согласен с условиями доставки*
           .buy__buttons
             .buy__captcha
               .input-container

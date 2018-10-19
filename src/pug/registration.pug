@@ -4,6 +4,23 @@ title: Sushevsky Registration
 extends shared/_layout
 block content
 
+  // BEGIN SECTION :: slider
+
+  section(data-aos='fade-up')
+    .main-slider
+      .container
+        .slider(js-main-slider)
+          .item
+            img(src="img/slide-1.jpg", alt="")
+          .item
+            img(src="img/slide-1.jpg", alt="")
+          .item
+            img(src="img/slide-1.jpg", alt="")
+          .item
+            img(src="img/slide-1.jpg", alt="")
+
+  // END SECTION :: slider
+
   // BEGIN SECTION :: registration
 
   section
@@ -24,10 +41,9 @@ block content
               .input-container
                 label(for="f3") E-mail*
                 input#f3(type="text" name="mail")
-              .input-container
-                label.checkbox
-                  input(type='checkbox' title="Please agree to our policy!" name="agree")
-                  .checkbox__text Я согласен с условиями использования персональных данных*
+              .input-container.input-container--checkbox
+                input#f3-c(type='checkbox' title="Please agree to our policy!" name="agree")
+                label(for="f3-c").checkbox__text Я согласен с условиями использования персональных данных*
               .registration__captcha
                 .input-container
                   input(type="text" name="captcha" placeholder="Введите символы")

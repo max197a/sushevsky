@@ -51,7 +51,8 @@
   &__logotype
     max-width: 273px
     height: auto
-    width: 24%
+    // width: 24%
+    width: 260px
     margin-left: 6px
   &__wrapper-grid
     display: flex
@@ -83,7 +84,9 @@
       color: #fff
       transition: all $transitionSpeed $ease
       &:hover
-        background: $colorRed
+        background: $hoverCancel
+      &:active
+        background: $activeCancel
   &__shop-avatar
     margin-right: -15px
     margin: -10px -15px -10px 15px
@@ -109,6 +112,7 @@
       font-family: $room
       line-height: 1
       position: relative
+      transition: all $transitionSpeed $ease
       span
         display: inline-block
         line-height: 1
@@ -122,6 +126,9 @@
         left: -30px
         top: 19px
         letter-spacing: 0px
+    &:hover
+      p
+        color: $colorRed
   &__nav
     display: flex
     align-items: center
@@ -145,7 +152,7 @@
     .container
       padding: 0 40px
     &__logotype
-      // max-width: 220px
+      width: 200px
     &__phone
       margin-top: 8px
       margin-right: 0
@@ -198,7 +205,7 @@
       position: relative
       z-index: 1000
     &__logotype
-      width: 40%
+      width: 175px
     &__phone
       display: none
     &__shop-button
@@ -267,3 +274,8 @@
           width: 100% !important
           li
             font-size: 18px
+
++r($mobile)
+  .header
+    &__logotype
+      width: 110px

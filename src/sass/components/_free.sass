@@ -28,6 +28,7 @@
       line-height: 1
       position: relative
       color: #fff
+      transition: all $transitionSpeed $ease
       span
         display: inline-block
         line-height: 1
@@ -41,6 +42,9 @@
         left: -8px
         top: 9px
         letter-spacing: 0px
+    &:hover
+      p
+        color: rgba(white, 0.7)
 
 +r($desktop)
   .free

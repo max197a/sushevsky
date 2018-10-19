@@ -10,7 +10,7 @@
   ul
     margin: 0 !important
   &.selectric-select-nav
-    padding: 0 50px
+    padding: 0 35px
     .label
       font-size: 21px
       font-family: $regular
@@ -20,8 +20,14 @@
       transition: all $transitionSpeed $ease
       display: flex
       align-items: center
+      padding-right: 15px
+      position: relative
+      z-index: 2
       &:hover
         color: $colorRed
+    .button
+      right: 0
+
     .selectric-items
       ul
         font-size: 21px
@@ -233,7 +239,7 @@
 +r($desktop1268)
   .selectric-wrapper
     &.selectric-select-nav
-      padding: 0 40px
+      padding: 0 25px
       .label
         font-size: 20px
       .selectric-items
@@ -245,7 +251,7 @@
 +r($desktop)
   .selectric-wrapper
     &.selectric-select-nav
-      padding: 0 30px
+      padding: 0 15px
       .label
         font-size: 18px
       .selectric-items

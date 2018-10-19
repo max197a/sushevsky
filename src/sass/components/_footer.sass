@@ -33,8 +33,9 @@
       transition: all $transitionSpeed $ease
       margin: 0 auto 30px
       &:hover
-        background: #fff
-        color: $colorRed
+        background: $hoverColor
+      &:active
+        background: $activeColor
     p
       color: #fff
       line-height: 1.25
@@ -54,11 +55,19 @@
       color: #fff
       font-family: $regular
       margin: 11px 0
+      transition: all $transitionSpeed $ease
+      &:hover
+        color: rgba(white, 0.7)
   &__right
     display: flex
+    flex-wrap: wrap
     justify-content: flex-end
-    flex-direction: column
-    align-items: flex-end
+    align-items: flex-start
+    width: 42%
+    form
+      width: 100%
+      margin-left: auto
+      text-align: right
     p
       font-size: 18px
       color: #fff
@@ -68,8 +77,10 @@
     .input-container
       position: relative
       margin-bottom: 13px
-      max-width: 250px
+      max-width: 300px
+      width: 100%
       margin-top: 12px
+      margin-left: auto
       input
         padding: 7px
         font-family: $regular
@@ -92,12 +103,16 @@
         top: 0
         border: 1px solid #2b2b29 !important
         width: 36px
+        min-width: 36px
+        max-width: 36px
         height: 36px
         background-image: url(../img/search.svg)
         background-position: center
         background-size: 70%
         background-repeat: no-repeat
         cursor: pointer
+  &__c-info
+    width: 100%
   &__phone
     display: flex
     align-items: center
@@ -112,6 +127,7 @@
       line-height: 1
       position: relative
       color: #fff
+      transition: all $transitionSpeed $ease
       span
         display: inline-block
         line-height: 1
@@ -125,6 +141,9 @@
         left: -30px
         top: 16px
         letter-spacing: 0px
+    &:hover
+      p
+        color: rgba(white, 0.7)
   &__point
     display: none
 

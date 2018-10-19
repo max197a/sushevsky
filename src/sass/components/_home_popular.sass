@@ -65,6 +65,11 @@
     font-family: $regular
     color: #fff
     background: $colorRed
+    transition: all $transitionSpeed $ease
+    &:hover
+      background: $hoverColor
+    &:active
+      background: $activeColor
   &__price
     font-family: $extrabold
     color: #010101

@@ -39,3 +39,5 @@ PageList:
   ready: 20
 - file: buy.html
   ready: 20
+- file: item.html
+  ready: 20
