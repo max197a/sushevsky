@@ -36,7 +36,9 @@ block content
         .delivery__map
           p.delivery__map-title КАРТА ДОСТАВКИ
           .delivery__map-container
-            #delivery-map
+            //- #delivery-map
+            iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3Aa9fc75d35dac2e9f55dde8ffca400f237f9d27c05ff1bb0017090cf654f1d76d&source=constructor', width='100%', height='100%', frameborder='0')
+
       .container
         .ways
           .title-container
