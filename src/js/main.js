@@ -30,6 +30,7 @@ $(document).ready(function() {
     initSliders();
     initFile();
     initPopup();
+    initMap();
 
     // development helper
     _window.on("resize", debounce(setBreakpoint, 200));
@@ -490,6 +491,58 @@ $(document).ready(function() {
       .filter("[data-section='" + id + "']")
       .addClass("is-active");
   }
+
+  //////////
+  // MAP
+  //////////
+  function initMap(){
+    ymaps.ready(init);
+
+    function init() {
+      if ( $('#delivery-map').length === 0 ) return false
+
+      var myMap = new ymaps.Map("delivery-map", {
+        center: [55.73, 37.75],
+        zoom: 10
+      }, {
+        searchControlProvider: 'yandex#search'
+      });
+
+      var myGeoObject = new ymaps.GeoObject({
+        geometry: {
+          type: "Polygon",
+          coordinates: [
+            // Координаты вершин внешнего контура.
+            [
+              [55.75, 37.80],
+              [55.80, 37.90],
+              [55.75, 38.00],
+              [55.70, 38.00],
+              [55.70, 37.80]
+            ],
+            // Координаты вершин внутреннего контура.
+            []
+          ],
+          fillRule: "nonZero"
+        },
+        properties: {
+          balloonContent: "Описание зоны доставки"
+        }
+      }, {
+        // опции геообъекта.
+        fillColor: '#00FF00',
+        // Цвет обводки.
+        // strokeColor: '#0000FF',
+        // Общая прозрачность (как для заливки, так и для обводки).
+        // opacity: 0.5,
+        // Ширина обводки.
+        strokeWidth: 5,
+        // Стиль обводки.
+        // strokeStyle: 'shortdash'
+      });
+    }
+  }
+
 
   //////////
   // BARBA PJAX
