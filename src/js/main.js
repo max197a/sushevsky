@@ -112,7 +112,7 @@ $(document).ready(function() {
     var targetScroll = el.offset().top - headerHeight;
 
     TweenLite.to(window, 1, {
-      scrollTo: targetScroll,
+      scrollTo: {y: targetScroll, autoKill: false},
       ease: easingSwing
     });
   }
@@ -542,10 +542,20 @@ $(document).ready(function() {
         visibility: "visible"
       });
 
-      TweenLite.to(window, 0.2, {
-        scrollTo: 1,
-        ease: easingSwing
-      });
+      if ( $(lastClickEl).data('transitionScrolltop') !== false ){
+        TweenLite.to(window, 0.2, {
+          scrollTo: {y:1, autoKill:false},
+          ease: easingSwing
+        });
+      }
+
+      if ( $(lastClickEl).data('transitionScrolltocontent') === true ){
+        var targetMenuPos = $('.menu-p').last().offset().top;
+        TweenLite.to(window, 0.2, {
+          scrollTo: {y:targetMenuPos, autoKill:false},
+          ease: easingSwing
+        });
+      }
 
       AOS.refreshHard();
 
