@@ -27,7 +27,7 @@ $(document).ready(function() {
     initAutogrow();
     initSelectric();
     initValidations();
-    // initSliders();
+    initSliders();
     initFile();
     initPopup();
 
@@ -36,7 +36,6 @@ $(document).ready(function() {
   }
 
   // this is a master function which should have all functionality
-  initSliders();
   pageReady();
 
   //////////
@@ -247,7 +246,7 @@ $(document).ready(function() {
   //////////
 
   function initSliders() {
-    $("[js-main-slider]").slick({
+    $("[js-main-slider]:not(.slick-initialized)").slick({
       // infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -256,7 +255,7 @@ $(document).ready(function() {
       autoplay: true,
       autoplaySpeed: 5000
     });
-    $("[js-main-slider-2]").slick({
+    $("[js-main-slider-2]:not(.slick-initialized)").slick({
       // infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
