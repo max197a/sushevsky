@@ -30,7 +30,7 @@ $(document).ready(function() {
     initSliders();
     initFile();
     initPopup();
-    initMap();
+    // initMap();
 
     // development helper
     _window.on("resize", debounce(setBreakpoint, 200));
