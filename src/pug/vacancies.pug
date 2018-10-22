@@ -14,28 +14,28 @@ block content
         .title-container
           h2 Список вакансий
         .vacancies__grid
-          .vacancies__item
-            a(href="#") 
+          a(href="#" js-vacancies).vacancies__item.is-active
+            span.v-a
               span Официант (3)
               span.date 20.08.2018
-          .vacancies__item
-            a(href="#") 
+          a(href="#" js-vacancies).vacancies__item 
+            span.v-a
               span Сушеф (1)
               span.date 20.08.2018
-          .vacancies__item
-            a(href="#") 
+          a(href="#" js-vacancies).vacancies__item 
+            span.v-a
               span Повар (1)
               span.date 20.08.2018
-          .vacancies__item
-            a(href="#") 
+          a(href="#" js-vacancies).vacancies__item 
+            span.v-a
               span Курьер  (3)
               span.date 20.08.2018
-          .vacancies__item
-            a(href="#") 
+          a(href="#" js-vacancies).vacancies__item 
+            span.v-a
               span Программист (1)
               span.date 20.08.2018
-          .vacancies__item
-            a(href="#") 
+          a(href="#" js-vacancies).vacancies__item 
+            span.v-a
               span Разнорабочий (1)
               span.date 20.08.2018
   
@@ -44,10 +44,95 @@ block content
   // BEGIN SECTION :: courier
 
   section
-    .courier
+    .courier.courier__tab.is-active
+      .container
+        .title-container
+          h2 Официант
+        .courier__grid
+          .courier__list
+            p Требования
+            p - Личный автомобиль; 
+            p - Желание работать.
+            p Обязанности
+            p - Доставка заказов.
+          .courier__list
+            p Условия
+            p Мы предлагаем: 
+            p - Выплаты стабильные, ежедневные, еженедельные! 
+            p - Смены дневные и ночные по 12ч; 
+            p - Графики и подработки  обсуждаются индивидуально.
+    .courier.courier__tab
+      .container
+        .title-container
+          h2 Сушеф
+        .courier__grid
+          .courier__list
+            p Требования
+            p - Личный автомобиль; 
+            p - Желание работать.
+            p Обязанности
+            p - Доставка заказов.
+          .courier__list
+            p Условия
+            p Мы предлагаем: 
+            p - Выплаты стабильные, ежедневные, еженедельные! 
+            p - Смены дневные и ночные по 12ч; 
+            p - Графики и подработки  обсуждаются индивидуально. 
+    .courier.courier__tab
+      .container
+        .title-container
+          h2 Повар
+        .courier__grid
+          .courier__list
+            p Требования
+            p - Личный автомобиль; 
+            p - Желание работать.
+            p Обязанности
+            p - Доставка заказов.
+          .courier__list
+            p Условия
+            p Мы предлагаем: 
+            p - Выплаты стабильные, ежедневные, еженедельные! 
+            p - Смены дневные и ночные по 12ч; 
+            p - Графики и подработки  обсуждаются индивидуально. 
+    .courier.courier__tab
       .container
         .title-container
           h2 Курьер
+        .courier__grid
+          .courier__list
+            p Требования
+            p - Личный автомобиль; 
+            p - Желание работать.
+            p Обязанности
+            p - Доставка заказов.
+          .courier__list
+            p Условия
+            p Мы предлагаем: 
+            p - Выплаты стабильные, ежедневные, еженедельные! 
+            p - Смены дневные и ночные по 12ч; 
+            p - Графики и подработки  обсуждаются индивидуально. 
+    .courier.courier__tab
+      .container
+        .title-container
+          h2 Программист
+        .courier__grid
+          .courier__list
+            p Требования
+            p - Личный автомобиль; 
+            p - Желание работать.
+            p Обязанности
+            p - Доставка заказов.
+          .courier__list
+            p Условия
+            p Мы предлагаем: 
+            p - Выплаты стабильные, ежедневные, еженедельные! 
+            p - Смены дневные и ночные по 12ч; 
+            p - Графики и подработки  обсуждаются индивидуально. 
+    .courier.courier__tab
+      .container
+        .title-container
+          h2 Разнорабочий
         .courier__grid
           .courier__list
             p Требования

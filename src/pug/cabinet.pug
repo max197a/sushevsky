@@ -14,7 +14,7 @@ block content
         h2 Личный кабинет
     .cabinet
       .container
-        form.js-validation-form(action="#")
+        form.js-cabinet-form(action="#")
           p Личная информация
           .cabinet__grid
             .cabinet__left
@@ -44,7 +44,7 @@ block content
           .cabinet__grid.cabinet__grid--buttons
             .cabinet__left
               .input-container
-                a.btn(href="#") Сбросить пароль
+                a.btn(href="#reset-pass" data-effect="mfp-zoom-in" js-open-popup) Сбросить пароль
             .cabinet__right
               .cabinet__right--grid
                 .input-container

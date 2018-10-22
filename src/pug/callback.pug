@@ -14,7 +14,7 @@ block content
         h2 Обратная связь
     .callback
       .container
-        form.js-validation-form(action="#")
+        form.js-callback-form(action="#")
           p Нам очень важны отзывы о нашей работе, поэтому просим уделить минуту времени и высказать Ваше мнение о нас!
           p Отзыв о качестве обслуживания Вы можете направить нам с помощью приведенной ниже формы.
           .callback__grid
@@ -49,12 +49,13 @@ block content
             .callback__left
               .callback__captcha
                 .input-container
-                  input(type="text" placeholder="Введите символы")
+                  input(type="text" placeholder="Введите символы" name="captcha")
                 .callback__captcha-image
                   img(src="img/captcha.jpg", alt="")
             .callback__right
               .input-container
-                button.btn Отправить
+                button.btn(type="submit") Отправить
+                a(href="#thanks-popup-review" data-effect="mfp-zoom-in" js-open-popup js-open-ty-callback)
 
 
   // END SECTION :: callback

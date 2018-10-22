@@ -46,3 +46,71 @@ section
         a.btn(href="#") Добавить
 
 // END SECTION :: popup
+
+// BEGIN SECTION :: popup
+#login-popup.popup.popup--login.mfp-with-anim.mfp-hide
+  form.js-form-login(action="#")
+    .input-container
+      label(for="p1") Телефон
+      input#p1(type="text" name="phone")
+    .input-container
+      label(for="p2") Пароль
+      input#p2(type="password" name="password")
+    a(href="/registration.html") Регистрация
+    a(href="#password-popup" data-effect="mfp-zoom-in" js-open-popup) Забыли пароль?
+    input.btn(type="submit" value="ВОЙТИ")
+    a(href="#thanks-popup-login" data-effect="mfp-zoom-in" js-open-popup js-thanks-popup-login)
+// END SECTION :: popup
+
+// BEGIN SECTION :: thank-you login
+#thanks-popup-login.popup.popup--ty.mfp-with-anim.mfp-hide
+  p.ty__login Добро пожаловать!
+  .ty__container
+    p.ty__info Вы успешно вошли на сайт!
+  a.btn(href="#" js-close-popup) ОК
+// END SECTION :: thank-you login
+
+// BEGIN SECTION :: thank-you login
+#thanks-popup-registration.popup.popup--ty.mfp-with-anim.mfp-hide
+  p.ty__login Спасибо за регистрацию!
+  .ty__container
+    p.ty__info Регистрация прошла успешно.
+      br
+      | Пароль выслан на Ваш электронный адрес.
+  a.btn(href="#login-popup" data-effect="mfp-zoom-in" js-open-popup) ВОЙТИ
+// END SECTION :: thank-you login
+
+// BEGIN SECTION :: popup
+#reset-pass.popup.popup--login.mfp-with-anim.mfp-hide
+  form.js-reset-pass-form(action="#")
+    .input-container
+      label(for="r1") Телефон
+      input#r1(type="text" name="phone")
+    p Укажите номер телефона, который был введен вами во время регистрации.
+    input.btn(type="submit" value="Сбросить пароль")
+    a(href="#thanks-popup-reset" data-effect="mfp-zoom-in" js-open-popup js-open-ty-reset)
+// END SECTION :: popup
+
+// BEGIN SECTION :: thank-you login
+#thanks-popup-reset.popup.popup--ty.mfp-with-anim.mfp-hide
+  p.ty__login Спасибо !
+  .ty__container
+    p.ty__info На Ваш номер телефона выслан новый пароль.
+  a.btn(href="#" js-close-popup) ОК
+// END SECTION :: thank-you login
+
+// BEGIN SECTION :: thank-you login
+#thanks-popup-pay.popup.popup--ty.mfp-with-anim.mfp-hide
+  p.ty__login Спасибо !
+  .ty__container
+    p.ty__info Ваш заказ оплачен
+  a.btn(href="#" js-close-popup) ОК
+// END SECTION :: thank-you login
+
+// BEGIN SECTION :: thank-you login
+#thanks-popup-review.popup.popup--ty.mfp-with-anim.mfp-hide
+  p.ty__login Спасибо !
+  .ty__container
+    p.ty__info Ваш отзыв отправлен
+  a.btn(href="#" js-close-popup) ОК
+// END SECTION :: thank-you login

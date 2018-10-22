@@ -41,7 +41,7 @@
       border: 1px solid #fff
       background: #fff
       font-size: 16px
-      padding: 9px
+      padding: 11px 9px
       width: 100%
       color: $fontColor
       font-family: $regular
@@ -93,6 +93,7 @@
     -moz-user-select: none
     -ms-user-select: none
     user-select: none
+    max-height: 40px
   .button
     display: inline-block
     position: absolute
@@ -186,6 +187,8 @@
 
 .selectric-items
   width: auto !important
+  border: 1px solid #333
+  margin-top: 3px
   ul
     list-style: none
     padding: 0
@@ -193,28 +196,29 @@
     font-size: 14px
   li
     list-style: none
-    padding: 0
+    text-align: left
     margin: 0
     font-size: 14px
     line-height: 1.4
     display: inline-block
-    padding: 3px
+    padding: 3px 6px
     color: $fontColor
     cursor: pointer
     font-family: $regular
-    border-bottom: 1px solid #979797
+    // border-bottom: 1px solid #979797
     width: 100%
+    background: #fff
     &.selected
-      background: #E0E0E0
+      background: #f2f2f2
       color: #444
     &.highlighted
-      background: #D0D0D0
+      background: #f2f2f2
       color: #444
     &:hover
       background: $colorRed
       color: #fff
     &:last-child
-      border-bottom: none
+      border-bottom: none !important
   .disabled
     filter: alpha(opacity = 50)
     opacity: 0.5

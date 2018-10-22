@@ -5,6 +5,60 @@
   width: 100%
   margin: 0 auto
   position: relative
+  &--login
+    max-width: 350px
+    padding: 20px 30px
+    background: url(../img/popup-form.png) center center no-repeat
+    background-size: cover
+    .mfp-close
+      color: #fff
+    label
+      color: #fff
+    p
+      display: block
+      color: #fff
+      font-size: 15px
+      font-family: $regular
+      margin-bottom: 18px
+      margin-top: -5px
+    a
+      display: block
+      color: #fff
+      font-size: 15px
+      font-family: $regular
+      margin-bottom: 18px
+      margin-top: -5px
+      transition: all $transitionSpeed $ease
+      &:hover
+        color: $colorRed
+  .btn
+    display: flex
+    align-items: center
+    justify-content: center
+    max-width: 350px
+    width: 100%
+    padding: 8px 15px
+    font-size: 18px
+    margin: 10px 0 0 auto
+    font-family: $regular
+    color: #fff
+    background: $colorRed
+    transition: all $transitionSpeed $ease
+    border: 1px solid $colorRed
+    cursor: pointer
+    &:hover
+      background: $hoverColor
+    &:active
+      background: $activeColor
+    &--cancel
+      background: $btnCancel
+      border-color: $colorRed
+      color: #fff
+      padding: 9px 15px
+      &:hover
+        background: $hoverCancel
+      &:active
+        background: $activeCancel
   &__grid
     display: flex
     align-items: center
@@ -161,6 +215,31 @@
     img
       position: relative
 
+  &--ty
+    max-width: 600px
+    text-align: center
+    .ty__login
+      font-family: $room
+      font-size: 40px
+      color: $fontColor
+      text-align: center
+    .ty__info
+      padding: 25px
+      max-width: 400px
+      border-radius: 15px
+      overflow: hidden
+      background: url(../img/pattern-back2.png) center center repeat
+      background-size: 1200px 474px 
+      margin: 15px auto
+      font-size: 16px
+      font-family: $regular
+      color: #fff
+    .btn
+      width: auto
+      max-width: 100%
+      display: inline-block
+      margin: 0 auto
+
 .mfp-zoom-in
   .mfp-with-anim
     opacity: 0
@@ -197,6 +276,11 @@
             margin-top: 15px
             p
               font-size: 14px
+    &--ty
+      .ty__login
+        font-size: 28px
+      .ty__info
+        padding: 20px
     &__left
       width: 100%
       &:before

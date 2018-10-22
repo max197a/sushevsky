@@ -77,6 +77,14 @@ $(document).ready(function() {
     $("body").removeClass("is-fixed");
     $("html").removeClass("is-fixed");
   }
+  _document.on("click", "[js-close-popup]", function() {
+    $(".mfp-close").click();
+  });
+
+  _document.on("click", "[js-login-close]", function() {
+    // $(".mfp-close").click();
+    // $("[js-registration-link]").click();
+  });
 
   // Prevent # behavior
   _document
@@ -113,7 +121,7 @@ $(document).ready(function() {
     var targetScroll = el.offset().top - headerHeight;
 
     TweenLite.to(window, 1, {
-      scrollTo: {y: targetScroll, autoKill: false},
+      scrollTo: { y: targetScroll, autoKill: false },
       ease: easingSwing
     });
   }
@@ -154,6 +162,19 @@ $(document).ready(function() {
     $self.siblings().removeClass("is-active");
     $self.addClass("is-active");
     $(".popular__tab")
+      .removeClass("is-active")
+      .css("display", "none")
+      .eq(tabIndex)
+      .fadeIn();
+  });
+
+  _document.on("click", "[js-vacancies]", function(e) {
+    e.preventDefault();
+    var $self = $(this),
+      tabIndex = $self.index();
+    $self.siblings().removeClass("is-active");
+    $self.addClass("is-active");
+    $(".courier__tab")
       .removeClass("is-active")
       .css("display", "none")
       .eq(tabIndex)
@@ -446,6 +467,218 @@ $(document).ready(function() {
       }
     });
 
+    $(".js-registration-form").validate({
+      errorPlacement: validateErrorPlacement,
+      highlight: validateHighlight,
+      unhighlight: validateUnhighlight,
+      submitHandler: function(form) {
+        $("[js-thanks-popup-registration]").click();
+        $(form)
+          .find("input")
+          .val("");
+      },
+      rules: {
+        name: "required",
+        phone: validatePhone,
+        mail: {
+          required: true,
+          email: true
+        },
+        agree: "required",
+        captcha: "required"
+      },
+      messages: {
+        name: "Заполните это поле",
+        phone: {
+          required: "Заполните это поле",
+          minlength: "Введите корректный телефон"
+        },
+        mail: {
+          required: "Заполните это поле",
+          email: "E-mail содержит неправильный формат"
+        },
+        agree: "Заполните это поле",
+        captcha: "Заполните это поле"
+      }
+    });
+
+    $(".js-cabinet-form").validate({
+      errorPlacement: validateErrorPlacement,
+      highlight: validateHighlight,
+      unhighlight: validateUnhighlight,
+      submitHandler: function(form) {
+        // $("[js-thanks-popup-registration]").click();
+        $(form)
+          .find("input")
+          .val("");
+      },
+      rules: {
+        name: "required",
+        phone: validatePhone,
+        mail: {
+          required: true,
+          email: true
+        },
+        agree: "required",
+        point: "required",
+        captcha: "required"
+      },
+      messages: {
+        name: "Заполните это поле",
+        phone: {
+          required: "Заполните это поле",
+          minlength: "Введите корректный телефон"
+        },
+        mail: {
+          required: "Заполните это поле",
+          email: "E-mail содержит неправильный формат"
+        },
+        agree: "Заполните это поле",
+        point: "Заполните это поле",
+        captcha: "Заполните это поле"
+      }
+    });
+    $(".js-reset-pass-form").validate({
+      errorPlacement: validateErrorPlacement,
+      highlight: validateHighlight,
+      unhighlight: validateUnhighlight,
+      submitHandler: function(form) {
+        $("[js-open-ty-reset]").click();
+        $(form)
+          .find("input")
+          .val("");
+      },
+      rules: {
+        phone: validatePhone
+      },
+      messages: {
+        phone: {
+          required: "Заполните это поле",
+          minlength: "Введите корректный телефон"
+        }
+      }
+    });
+
+    $(".js-pay-form").validate({
+      errorPlacement: validateErrorPlacement,
+      highlight: validateHighlight,
+      unhighlight: validateUnhighlight,
+      submitHandler: function(form) {
+        $("[js-open-ty-pay]").click();
+        $(form)
+          .find("input")
+          .val("");
+      },
+      rules: {
+        name: "required",
+        number: "required",
+        month: {
+          required: true,
+          minlength: 2,
+          maxlength: 2
+        },
+        year: {
+          required: true,
+          minlength: 2,
+          maxlength: 2
+        },
+        cvv: {
+          required: true,
+          minlength: 3,
+          maxlength: 3
+        }
+      },
+      messages: {
+        name: "Заполните это поле",
+        number: "Заполните это поле",
+        month: "Заполните это поле",
+        year: "Заполните это поле",
+        cvv: "Заполните это поле"
+      }
+    });
+
+    $(".js-callback-form").validate({
+      errorPlacement: validateErrorPlacement,
+      highlight: validateHighlight,
+      unhighlight: validateUnhighlight,
+      submitHandler: function(form) {
+        $("[js-open-ty-callback]").click();
+        $(form)
+          .find("input")
+          .val("");
+      },
+      rules: {
+        name: "required",
+        phone: validatePhone,
+        mail: {
+          required: true,
+          email: true
+        },
+        captcha: "required",
+        check: "required",
+        agree: "required",
+        point: "required",
+        selectpoint: "required"
+      },
+      messages: {
+        name: "Заполните это поле",
+        phone: {
+          required: "Заполните это поле",
+          minlength: "Введите корректный телефон"
+        },
+        mail: {
+          required: "Заполните это поле",
+          email: "E-mail содержит неправильный формат"
+        },
+        captcha: "Заполните это поле",
+        check: "Заполните это поле",
+        agree: "Заполните это поле",
+        point: "Заполните это поле",
+        selectpoint: "Заполните это поле"
+      }
+    });
+
+    $(".js-form-login").validate({
+      errorPlacement: validateErrorPlacement,
+      highlight: validateHighlight,
+      unhighlight: validateUnhighlight,
+      submitHandler: function(form) {
+        $("[js-thanks-popup-login]").click();
+        $(form)
+          .find("input")
+          .val("");
+        // initSubmit();
+        // $.ajax({
+        //   type: "POST",
+        //   url: $(form).attr("action"),
+        //   data: $(form).serialize(),
+        //   success: function(response) {
+        //     $(form).removeClass("loading");
+        //     var data = $.parseJSON(response);
+        //     if (data.status == "success") {
+        //       // do something I can't test
+        //     } else {
+        //       $(form)
+        //         .find("[data-error]")
+        //         .html(data.message)
+        //         .show();
+        //     }
+        //   }
+        // });
+      },
+      rules: {
+        password: "required",
+        phone: validatePhone
+      },
+      messages: {
+        password: "Заполните это поле",
+        phone: {
+          required: "Заполните это поле",
+          minlength: "Введите корректный телефон"
+        }
+      }
+    });
+
     $.validator.setDefaults({
       ignore: [] // DON'T IGNORE PLUGIN HIDDEN SELECTS, CHECKBOXES AND RADIOS!!!
     });
@@ -495,54 +728,60 @@ $(document).ready(function() {
   //////////
   // MAP
   //////////
-  function initMap(){
+  function initMap() {
     ymaps.ready(init);
 
     function init() {
-      if ( $('#delivery-map').length === 0 ) return false
+      if ($("#delivery-map").length === 0) return false;
 
-      var myMap = new ymaps.Map("delivery-map", {
-        center: [55.73, 37.75],
-        zoom: 10
-      }, {
-        searchControlProvider: 'yandex#search'
-      });
-
-      var myGeoObject = new ymaps.GeoObject({
-        geometry: {
-          type: "Polygon",
-          coordinates: [
-            // Координаты вершин внешнего контура.
-            [
-              [55.75, 37.80],
-              [55.80, 37.90],
-              [55.75, 38.00],
-              [55.70, 38.00],
-              [55.70, 37.80]
-            ],
-            // Координаты вершин внутреннего контура.
-            []
-          ],
-          fillRule: "nonZero"
+      var myMap = new ymaps.Map(
+        "delivery-map",
+        {
+          center: [55.73, 37.75],
+          zoom: 10
         },
-        properties: {
-          balloonContent: "Описание зоны доставки"
+        {
+          searchControlProvider: "yandex#search"
         }
-      }, {
-        // опции геообъекта.
-        fillColor: '#00FF00',
-        // Цвет обводки.
-        // strokeColor: '#0000FF',
-        // Общая прозрачность (как для заливки, так и для обводки).
-        // opacity: 0.5,
-        // Ширина обводки.
-        strokeWidth: 5,
-        // Стиль обводки.
-        // strokeStyle: 'shortdash'
-      });
+      );
+
+      var myGeoObject = new ymaps.GeoObject(
+        {
+          geometry: {
+            type: "Polygon",
+            coordinates: [
+              // Координаты вершин внешнего контура.
+              [
+                [55.75, 37.8],
+                [55.8, 37.9],
+                [55.75, 38.0],
+                [55.7, 38.0],
+                [55.7, 37.8]
+              ],
+              // Координаты вершин внутреннего контура.
+              []
+            ],
+            fillRule: "nonZero"
+          },
+          properties: {
+            balloonContent: "Описание зоны доставки"
+          }
+        },
+        {
+          // опции геообъекта.
+          fillColor: "#00FF00",
+          // Цвет обводки.
+          // strokeColor: '#0000FF',
+          // Общая прозрачность (как для заливки, так и для обводки).
+          // opacity: 0.5,
+          // Ширина обводки.
+          strokeWidth: 5
+          // Стиль обводки.
+          // strokeStyle: 'shortdash'
+        }
+      );
     }
   }
-
 
   //////////
   // BARBA PJAX
@@ -595,17 +834,19 @@ $(document).ready(function() {
         visibility: "visible"
       });
 
-      if ( $(lastClickEl).data('transitionScrolltop') !== false ){
+      if ($(lastClickEl).data("transitionScrolltop") !== false) {
         TweenLite.to(window, 0.2, {
-          scrollTo: {y:1, autoKill:false},
+          scrollTo: { y: 1, autoKill: false },
           ease: easingSwing
         });
       }
 
-      if ( $(lastClickEl).data('transitionScrolltocontent') === true ){
-        var targetMenuPos = $('.menu-p').last().offset().top;
+      if ($(lastClickEl).data("transitionScrolltocontent") === true) {
+        var targetMenuPos = $(".menu-p")
+          .last()
+          .offset().top;
         TweenLite.to(window, 0.2, {
-          scrollTo: {y:targetMenuPos, autoKill:false},
+          scrollTo: { y: targetMenuPos, autoKill: false },
           ease: easingSwing
         });
       }
@@ -670,6 +911,7 @@ $(document).ready(function() {
     newPageRawHTML
   ) {
     pageReady();
+    $(".mfp-close").click();
   });
 
   Barba.Dispatcher.on("transitionCompleted", function() {

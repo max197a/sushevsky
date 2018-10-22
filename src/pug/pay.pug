@@ -13,7 +13,7 @@ block content
       h2 Оплата
     .pay
       .container
-        form.js-validation-form(action="")
+        form.js-pay-form(action="#")
           .pay__grid
             .pay__left
               p Вы оплачиваете:
@@ -73,6 +73,7 @@ block content
                   a.btn.btn--cancel(href="#") Отменить оплату
                 .input-container
                   input.btn(type="submit" value="Оплатить")
+                  a(href="#thanks-popup-pay" data-effect="mfp-zoom-in" js-open-popup js-open-ty-pay)
         
   
   // END SECTION :: pay

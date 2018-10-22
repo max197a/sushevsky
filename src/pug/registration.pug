@@ -14,7 +14,7 @@ block content
         h2 Регистрация
     .registration
       .container
-        form.js-validation-form(action="#")
+        form.js-registration-form(action="#")
           .registration__grid
             .registration__left
               .input-container
@@ -37,6 +37,7 @@ block content
             .registration__right
               .input-container
                 input.btn(type="submit" value="Зарегистрироваться")
+                a(href="#thanks-popup-registration" data-effect="mfp-zoom-in" js-open-popup js-thanks-popup-registration)
 
 
   // END SECTION :: registration

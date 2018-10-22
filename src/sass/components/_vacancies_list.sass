@@ -12,24 +12,27 @@
     width: 30%
     max-width: 245px
     margin: 6px 1.5%
-    a
+    .v-a
       display: flex
       align-items: center
       justify-content: space-between
-      &:hover
-        span
-          color: $colorRed
+    &.is-active
       span
-        font-family: $extrabold
-        font-size: 18px
-        color: $fontColor
-        transition: all $transitionSpeed $ease
-        &.date
-          color: $colorRed
-          font-family: $regular
-          font-size: 12px
-          display: inline-block
-          margin-left: 10px
+        color: $colorRed
+    &:hover
+      span
+        color: $colorRed
+    span
+      font-family: $extrabold
+      font-size: 18px
+      color: $fontColor
+      transition: all $transitionSpeed $ease
+      &.date
+        color: $colorRed
+        font-family: $regular
+        font-size: 12px
+        display: inline-block
+        margin-left: 10px
 
 
 
