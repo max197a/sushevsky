@@ -33,7 +33,7 @@ header.header
               | 55
               span.dot •
               | 55
-        .header__shop
+        .header__shop(js-link data-href="buy.html" js-sticky-anchor)
           .header__shop-info
             p Корзина:
             p 1 товар, 350 руб.
@@ -99,3 +99,14 @@ header.header
 //-           img(src="img/slide-1.jpg", alt="")
 
 //- // END SECTION :: slider
+
+// sticky shop
+.header__shop.header__shop--sticky(js-link data-href="buy.html" js-sticky-shop)
+  .header__shop-info
+    p Корзина:
+    p 1 товар, 350 руб.
+  .header__shop-button
+    a(href="#") Оформить заказ
+  a.header__shop-avatar(href="#login-popup" data-effect="mfp-zoom-in" js-open-popup)
+    img(src="img/face-icon.png", alt="")
+      

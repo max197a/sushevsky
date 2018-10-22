@@ -44,7 +44,13 @@ $(document).ready(function() {
   //////////
 
   function initaos() {
-    AOS.init();
+    AOS.init({
+      once: true,
+      mirror: false
+    });
+    // document.addEventListener('aos:in', function(detail) {
+    //   console.log('animated in', detail);
+    // });
   }
 
   function legacySupport() {
@@ -238,6 +244,62 @@ $(document).ready(function() {
   _document.on("click", "[close-form]", function() {
     $(".form-block-hidden").slideToggle();
   });
+
+  //////////
+  // header scroller
+  //////////
+  _window.on('scroll', throttle(function(){
+    var vScroll = _window.scrollTop();
+    var headerHeight = $('.header').height();
+
+    if ( vScroll > headerHeight ){
+      $('[js-sticky-shop]').addClass('is-visible');
+    } else {
+      $('[js-sticky-shop]').removeClass('is-visible')
+    }
+  }, 50));
+
+  var initialLoad = true
+  _window.on('resize', debounce(positionStickyShop, 100))
+  positionStickyShop();
+
+  function positionStickyShop(){
+    var $el = $('[js-sticky-shop]');
+    var wWidth = _window.width();
+    var anchor = $('[js-sticky-anchor]');
+    var AosOffset = initialLoad ? 20 : 0
+    initialLoad = false
+    // anchor.closest('.aos-animate').length > 0 ? 0 : 20
+
+    var anchorOffsetX = Math.floor(
+      wWidth -
+      (anchor.offset().left +
+      anchor.outerWidth()) +
+      AosOffset
+    );
+    var anchorOffsetY = Math.floor( Math.abs( anchor.offset().top ));
+
+    $el.css({
+      'top': anchorOffsetY,
+      'right': anchorOffsetX
+    })
+  }
+
+  // pseudo link for cart
+  _document
+    .on('click', '[js-link]', function(e){
+      // do nothing on modal opening link
+      if ( $(e.target).closest('.header__shop-avatar').length > 0 ){
+        return
+      }
+
+      var newUrl = window.location.origin + '/' +$(this).data('href')
+      if ( Barba ){
+        Barba.Pjax.goTo(newUrl)
+      } else {
+        window.location.href = newUrl
+      }
+    })
 
   //////////
   // input type file
